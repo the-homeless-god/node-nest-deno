@@ -59,6 +59,7 @@
     "drop": "pm2 delete",
     "start": "pm2 start pm2.dev.config.json",
     "test": "lerna run test --concurrency 1 --stream --no-prefix && echo",
+    "build": "lerna run build --concurrency 1 --stream --no-prefix && echo",
     "test:coverage": "lerna run test:coverage --stream",
     "update:install": "npm update --save && npm install",
     "update:pull": "npm outdated",
