@@ -1,0 +1,9 @@
+# compiled output
+/dist
+/node_modules
+temp
+# OS
+.DS_Store
+.env.production
+.env
+coverage

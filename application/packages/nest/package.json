@@ -1,0 +1,76 @@
+{
+  "name": "@the-homeless-god/node-nest-deno-nest",
+  "author": "Marat Zimnurov <zimtir@mail.ru>",
+  "homepage": "https://github.com/the-homeless-god/node-nest-deno#readme",
+  "license": "ISC",
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-homeless-god/node-nest-deno.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-homeless-god/node-nest-deno/issues"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "nest build && npm run build:package",
+    "build:common": "cd ../common && npm run build && cd ../nest",
+    "build:package": "rm -rf dist && ncc build src/main.ts --out dist/ -e test -t -a --no-source-map-register -m -e typescript && cp -r swagger-static dist/",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "npm run build:common && cross-env IS_LOCAL=true nest start --debug --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "cross-env IS_TEST=true jest --runInBand",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --ci --json --coverage --runInBand --testLocationInResults --outputFile=report.json",
+    "test:debug": "cross-env IS_TEST=true node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "npm run test -- --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@the-homeless-god/node-nest-deno-common": "^1.0.0",
+    "@nestjs/common": "^10.2.7",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.2.7",
+    "@nestjs/platform-express": "^10.2.7",
+    "@nestjs/serve-static": "^4.0.0",
+    "@nestjs/swagger": "^7.1.14",
+    "axios": "^1.6.5",
+    "class-validator": "^0.14.0",
+    "express": "^4.18.2",
+    "swagger-stats": "^0.99.7",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.2.0",
+    "@nestjs/schematics": "^10.0.2",
+    "@nestjs/testing": "^10.2.7",
+    "@types/express": "^4.17.20",
+    "@types/supertest": "^2.0.15",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "fastify-swagger": "^5.2.0",
+    "prettier": "^3.0.3",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-loader": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
