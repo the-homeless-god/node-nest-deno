@@ -3,8 +3,8 @@
   "author": "Marat Zimnurov <zimtir@mail.ru>",
   "homepage": "https://github.com/the-homeless-god/node-nest-deno#readme",
   "license": "ISC",
-  "main": "dist/common/index.js",
-  "types": "dist/common/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "version": "1.0.0",
   "description": "",
   "directories": {

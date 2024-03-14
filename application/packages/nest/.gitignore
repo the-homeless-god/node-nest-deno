@@ -5,5 +5,4 @@ temp
 # OS
 .DS_Store
 .env.production
-.env
 coverage

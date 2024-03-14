@@ -26,7 +26,7 @@ export const setupSwagger = (app: NestExpressApplication) => {
   app.use(
     swaggerStats.getMiddleware({
       uriPath: `/${config.prefix}/${config.version}/swagger-stats`,
-      swaggerSpec: document,
+      // swaggerSpec: document,
     }),
   );
 

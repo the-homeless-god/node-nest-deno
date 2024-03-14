@@ -3,10 +3,10 @@
   'object' == typeof exports && 'object' == typeof module
     ? (module.exports = t())
     : 'function' == typeof define && define.amd
-      ? define([], t)
-      : 'object' == typeof exports
-        ? (exports.SwaggerUIStandalonePreset = t())
-        : (e.SwaggerUIStandalonePreset = t());
+    ? define([], t)
+    : 'object' == typeof exports
+    ? (exports.SwaggerUIStandalonePreset = t())
+    : (e.SwaggerUIStandalonePreset = t());
 })(this, () =>
   (() => {
     var e = {
@@ -248,8 +248,8 @@
                 void 0 === t && void 0 === r
                   ? new Uint8Array(e)
                   : void 0 === r
-                    ? new Uint8Array(e, t)
-                    : new Uint8Array(e, t, r)),
+                  ? new Uint8Array(e, t)
+                  : new Uint8Array(e, t, r)),
               Object.setPrototypeOf(n, Buffer.prototype),
               n
             );
@@ -342,8 +342,8 @@
               ('string' == typeof r
                 ? ((n = r), (r = 0))
                 : r > 2147483647
-                  ? (r = 2147483647)
-                  : r < -2147483648 && (r = -2147483648),
+                ? (r = 2147483647)
+                : r < -2147483648 && (r = -2147483648),
               numberIsNaN((r = +r)) && (r = i ? 0 : e.length - 1),
               r < 0 && (r = e.length + r),
               r >= e.length)
@@ -571,10 +571,10 @@
                   e <= 0
                     ? createBuffer(e)
                     : void 0 !== t
-                      ? 'string' == typeof r
-                        ? createBuffer(e).fill(t, r)
-                        : createBuffer(e).fill(t)
-                      : createBuffer(e)
+                    ? 'string' == typeof r
+                      ? createBuffer(e).fill(t, r)
+                      : createBuffer(e).fill(t)
+                    : createBuffer(e)
                 );
               })(e, t, r);
             }),
@@ -693,8 +693,8 @@
               return 0 === e
                 ? ''
                 : 0 === arguments.length
-                  ? utf8Slice(this, 0, e)
-                  : slowToString.apply(this, arguments);
+                ? utf8Slice(this, 0, e)
+                : slowToString.apply(this, arguments);
             }),
             (Buffer.prototype.toLocaleString = Buffer.prototype.toString),
             (Buffer.prototype.equals = function equals(e) {
@@ -1887,10 +1887,10 @@
                     e.bind && i
                       ? f(_, n)
                       : e.wrap && i
-                        ? wrapConstructor(_)
-                        : B && a(_)
-                          ? o(_)
-                          : _),
+                      ? wrapConstructor(_)
+                      : B && a(_)
+                      ? o(_)
+                      : _),
                   (e.sham || (_ && _.sham) || (g && g.sham)) &&
                     l(m, 'sham', !0),
                   l(A, d, m),
@@ -1933,10 +1933,10 @@
               void 0 === t
                 ? e
                 : o
-                  ? a(e, t)
-                  : function () {
-                      return e.apply(t, arguments);
-                    }
+                ? a(e, t)
+                : function () {
+                    return e.apply(t, arguments);
+                  }
             );
           };
         },
@@ -2587,16 +2587,16 @@
                         (1 == i && t >= 48 && t <= 57 && 45 == a)
                           ? '\\' + t.toString(16) + ' '
                           : (0 == i && 1 == n && 45 == t) ||
-                              !(
-                                t >= 128 ||
-                                45 == t ||
-                                95 == t ||
-                                (t >= 48 && t <= 57) ||
-                                (t >= 65 && t <= 90) ||
-                                (t >= 97 && t <= 122)
-                              )
-                            ? '\\' + r.charAt(i)
-                            : r.charAt(i))
+                            !(
+                              t >= 128 ||
+                              45 == t ||
+                              95 == t ||
+                              (t >= 48 && t <= 57) ||
+                              (t >= 65 && t <= 90) ||
+                              (t >= 97 && t <= 122)
+                            )
+                          ? '\\' + r.charAt(i)
+                          : r.charAt(i))
                     : (o += '�');
                 return o;
               };
@@ -2655,9 +2655,9 @@
                       a + l >= f
                         ? ((s = 0), (a = f))
                         : a + l >= 1
-                          ? ((s = (t * u - 1) * Math.pow(2, i)), (a += l))
-                          : ((s = t * Math.pow(2, l - 1) * Math.pow(2, i)),
-                            (a = 0)));
+                        ? ((s = (t * u - 1) * Math.pow(2, i)), (a += l))
+                        : ((s = t * Math.pow(2, l - 1) * Math.pow(2, i)),
+                          (a = 0)));
                 i >= 8;
                 e[r + p] = 255 & s, p += d, s /= 256, i -= 8
               );
@@ -2775,10 +2775,10 @@
               return void 0 === e
                 ? r
                 : e < 0
-                  ? Math.max(0, t + e)
-                  : void 0 === t
-                    ? e
-                    : Math.min(t, e);
+                ? Math.max(0, t + e)
+                : void 0 === t
+                ? e
+                : Math.min(t, e);
             }
             var h = 0,
               p = 1,
@@ -2817,36 +2817,36 @@
               return null == e
                 ? emptySequence()
                 : isIterable(e)
-                  ? e.toSeq()
-                  : seqFromValue(e);
+                ? e.toSeq()
+                : seqFromValue(e);
             }
             function KeyedSeq(e) {
               return null == e
                 ? emptySequence().toKeyedSeq()
                 : isIterable(e)
-                  ? isKeyed(e)
-                    ? e.toSeq()
-                    : e.fromEntrySeq()
-                  : keyedSeqFromValue(e);
+                ? isKeyed(e)
+                  ? e.toSeq()
+                  : e.fromEntrySeq()
+                : keyedSeqFromValue(e);
             }
             function IndexedSeq(e) {
               return null == e
                 ? emptySequence()
                 : isIterable(e)
-                  ? isKeyed(e)
-                    ? e.entrySeq()
-                    : e.toIndexedSeq()
-                  : indexedSeqFromValue(e);
+                ? isKeyed(e)
+                  ? e.entrySeq()
+                  : e.toIndexedSeq()
+                : indexedSeqFromValue(e);
             }
             function SetSeq(e) {
               return (
                 null == e
                   ? emptySequence()
                   : isIterable(e)
-                    ? isKeyed(e)
-                      ? e.entrySeq()
-                      : e
-                    : indexedSeqFromValue(e)
+                  ? isKeyed(e)
+                    ? e.entrySeq()
+                    : e
+                  : indexedSeqFromValue(e)
               ).toSetSeq();
             }
             (Iterator.prototype.toString = function () {
@@ -2945,12 +2945,12 @@
               var t = Array.isArray(e)
                 ? new ArraySeq(e).fromEntrySeq()
                 : isIterator(e)
-                  ? new IteratorSeq(e).fromEntrySeq()
-                  : hasIterator(e)
-                    ? new IterableSeq(e).fromEntrySeq()
-                    : 'object' == typeof e
-                      ? new ObjectSeq(e)
-                      : void 0;
+                ? new IteratorSeq(e).fromEntrySeq()
+                : hasIterator(e)
+                ? new IterableSeq(e).fromEntrySeq()
+                : 'object' == typeof e
+                ? new ObjectSeq(e)
+                : void 0;
               if (!t)
                 throw new TypeError(
                   'Expected Array or iterable object of [k, v] entries, or keyed object: ' +
@@ -2981,10 +2981,10 @@
               return isArrayLike(e)
                 ? new ArraySeq(e)
                 : isIterator(e)
-                  ? new IteratorSeq(e)
-                  : hasIterator(e)
-                    ? new IterableSeq(e)
-                    : void 0;
+                ? new IteratorSeq(e)
+                : hasIterator(e)
+                ? new IterableSeq(e)
+                : void 0;
             }
             function seqIterate(e, t, r, n) {
               var i = e._cache;
@@ -3024,21 +3024,21 @@
                     }),
                   )
                 : isPlainObj(t)
-                  ? e.call(
-                      n,
-                      r,
-                      KeyedSeq(t).map(function (r, n) {
-                        return fromJSWith(e, r, n, t);
-                      }),
-                    )
-                  : t;
+                ? e.call(
+                    n,
+                    r,
+                    KeyedSeq(t).map(function (r, n) {
+                      return fromJSWith(e, r, n, t);
+                    }),
+                  )
+                : t;
             }
             function fromJSDefault(e) {
               return Array.isArray(e)
                 ? IndexedSeq(e).map(fromJSDefault).toList()
                 : isPlainObj(e)
-                  ? KeyedSeq(e).map(fromJSDefault).toMap()
-                  : e;
+                ? KeyedSeq(e).map(fromJSDefault).toMap()
+                : e;
             }
             function isPlainObj(e) {
               return (
@@ -3104,8 +3104,8 @@
                     r
                       ? !e.has(t)
                       : i
-                        ? !is(t, e.get(n, c))
-                        : !is(e.get(n, c), t)
+                      ? !is(t, e.get(n, c))
+                      : !is(e.get(n, c), t)
                   )
                     return (a = !1), !1;
                 });
@@ -3522,14 +3522,14 @@
               return null == e
                 ? emptyMap()
                 : isMap(e) && !isOrdered(e)
-                  ? e
-                  : emptyMap().withMutations(function (t) {
-                      var r = KeyedIterable(e);
-                      assertNotInfinite(r.size),
-                        r.forEach(function (e, r) {
-                          return t.set(r, e);
-                        });
-                    });
+                ? e
+                : emptyMap().withMutations(function (t) {
+                    var r = KeyedIterable(e);
+                    assertNotInfinite(r.size),
+                      r.forEach(function (e, r) {
+                        return t.set(r, e);
+                      });
+                  });
             }
             function isMap(e) {
               return !(!e || !e[V]);
@@ -3581,12 +3581,12 @@
                 return 0 === this.size
                   ? this
                   : this.__ownerID
-                    ? ((this.size = 0),
-                      (this._root = null),
-                      (this.__hash = void 0),
-                      (this.__altered = !0),
-                      this)
-                    : emptyMap();
+                  ? ((this.size = 0),
+                    (this._root = null),
+                    (this.__hash = void 0),
+                    (this.__altered = !0),
+                    this)
+                  : emptyMap();
               }),
               (Map.prototype.merge = function () {
                 return mergeIntoMapWith(this, void 0, arguments);
@@ -3658,8 +3658,8 @@
                 return e === this.__ownerID
                   ? this
                   : e
-                    ? makeMap(this.size, this._root, e, this.__hash)
-                    : ((this.__ownerID = e), (this.__altered = !1), this);
+                  ? makeMap(this.size, this._root, e, this.__hash)
+                  : ((this.__ownerID = e), (this.__altered = !1), this);
               }),
               (Map.isMap = isMap);
             var W,
@@ -3736,15 +3736,15 @@
                   (e.__altered = !0),
                   e)
                 : n
-                  ? makeMap(i, n)
-                  : emptyMap();
+                ? makeMap(i, n)
+                : emptyMap();
             }
             function updateNode(e, t, r, n, i, o, a, s) {
               return e
                 ? e.update(t, r, n, i, o, a, s)
                 : o === c
-                  ? e
-                  : (SetRef(s), SetRef(a), new ValueNode(t, n, [i, o]));
+                ? e
+                : (SetRef(s), SetRef(a), new ValueNode(t, n, [i, o]));
             }
             function isLeafNode(e) {
               return (
@@ -3810,8 +3810,8 @@
               return e && e.mergeDeep && isIterable(t)
                 ? e.mergeDeep(t)
                 : is(e, t)
-                  ? e
-                  : t;
+                ? e
+                : t;
             }
             function deepMergerWith(e) {
               return function (t, r, n) {
@@ -3828,24 +3828,24 @@
                 })).length
                 ? e
                 : 0 !== e.size || e.__ownerID || 1 !== r.length
-                  ? e.withMutations(function (e) {
-                      for (
-                        var n = t
-                            ? function (r, n) {
-                                e.update(n, c, function (e) {
-                                  return e === c ? r : t(e, r, n);
-                                });
-                              }
-                            : function (t, r) {
-                                e.set(r, t);
-                              },
-                          i = 0;
-                        i < r.length;
-                        i++
-                      )
-                        r[i].forEach(n);
-                    })
-                  : e.constructor(r[0]);
+                ? e.withMutations(function (e) {
+                    for (
+                      var n = t
+                          ? function (r, n) {
+                              e.update(n, c, function (e) {
+                                return e === c ? r : t(e, r, n);
+                              });
+                            }
+                          : function (t, r) {
+                              e.set(r, t);
+                            },
+                        i = 0;
+                      i < r.length;
+                      i++
+                    )
+                      r[i].forEach(n);
+                  })
+                : e.constructor(r[0]);
             }
             function updateInDeepMap(e, t, r, n) {
               var i = e === c,
@@ -3862,8 +3862,8 @@
               return l === f
                 ? e
                 : l === c
-                  ? e.remove(u)
-                  : (i ? emptyMap() : e).set(u, l);
+                ? e.remove(u)
+                : (i ? emptyMap() : e).set(u, l);
             }
             function popCount(e) {
               return (
@@ -4061,11 +4061,11 @@
                     s
                       ? void SetRef(o)
                       : u
-                        ? e && e === this.ownerID
-                          ? ((this.entry[1] = i), this)
-                          : new ValueNode(e, this.keyHash, [n, i])
-                        : (SetRef(o),
-                          mergeIntoNode(this, e, t, hash(n), [n, i])));
+                      ? e && e === this.ownerID
+                        ? ((this.entry[1] = i), this)
+                        : new ValueNode(e, this.keyHash, [n, i])
+                      : (SetRef(o),
+                        mergeIntoNode(this, e, t, hash(n), [n, i])));
               }),
               (ArrayMapNode.prototype.iterate =
                 HashCollisionNode.prototype.iterate =
@@ -4164,8 +4164,8 @@
                   ? 0 === e
                     ? this.shift()
                     : e === this.size - 1
-                      ? this.pop()
-                      : this.splice(e, 1)
+                    ? this.pop()
+                    : this.splice(e, 1)
                   : this;
               }),
               (List.prototype.insert = function (e, t) {
@@ -4175,13 +4175,13 @@
                 return 0 === this.size
                   ? this
                   : this.__ownerID
-                    ? ((this.size = this._origin = this._capacity = 0),
-                      (this._level = a),
-                      (this._root = this._tail = null),
-                      (this.__hash = void 0),
-                      (this.__altered = !0),
-                      this)
-                    : emptyList();
+                  ? ((this.size = this._origin = this._capacity = 0),
+                    (this._level = a),
+                    (this._root = this._tail = null),
+                    (this.__hash = void 0),
+                    (this.__altered = !0),
+                    this)
+                  : emptyList();
               }),
               (List.prototype.push = function () {
                 var e = arguments,
@@ -4246,16 +4246,16 @@
                 return e === this.__ownerID
                   ? this
                   : e
-                    ? makeList(
-                        this._origin,
-                        this._capacity,
-                        this._level,
-                        this._root,
-                        this._tail,
-                        e,
-                        this.__hash,
-                      )
-                    : ((this.__ownerID = e), this);
+                  ? makeList(
+                      this._origin,
+                      this._capacity,
+                      this._level,
+                      this._root,
+                      this._tail,
+                      e,
+                      this.__hash,
+                    )
+                  : ((this.__ownerID = e), this);
               }),
               (List.isList = isList);
             var G = '@@__IMMUTABLE_LIST__@@',
@@ -4514,14 +4514,14 @@
               return null == e
                 ? emptyOrderedMap()
                 : isOrderedMap(e)
-                  ? e
-                  : emptyOrderedMap().withMutations(function (t) {
-                      var r = KeyedIterable(e);
-                      assertNotInfinite(r.size),
-                        r.forEach(function (e, r) {
-                          return t.set(r, e);
-                        });
-                    });
+                ? e
+                : emptyOrderedMap().withMutations(function (t) {
+                    var r = KeyedIterable(e);
+                    assertNotInfinite(r.size),
+                      r.forEach(function (e, r) {
+                        return t.set(r, e);
+                      });
+                  });
             }
             function isOrderedMap(e) {
               return isMap(e) && isOrdered(e);
@@ -5022,8 +5022,8 @@
                     return (!i || a % 2) && (i = o.next()).done
                       ? i
                       : a % 2
-                        ? iteratorValue(r, a++, t)
-                        : iteratorValue(r, a++, i.value, i);
+                      ? iteratorValue(r, a++, t)
+                      : iteratorValue(r, a++, i.value, i);
                   });
                 }),
                 r
@@ -5142,8 +5142,8 @@
               return isKeyed(e)
                 ? KeyedIterable
                 : isIndexed(e)
-                  ? IndexedIterable
-                  : SetIterable;
+                ? IndexedIterable
+                : SetIterable;
             }
             function makeSequence(e) {
               return Object.create(
@@ -5204,11 +5204,11 @@
                 return 0 === this.size
                   ? this
                   : this.__ownerID
-                    ? ((this.size = 0),
-                      this._map.clear(),
-                      this._list.clear(),
-                      this)
-                    : emptyOrderedMap();
+                  ? ((this.size = 0),
+                    this._map.clear(),
+                    this._list.clear(),
+                    this)
+                  : emptyOrderedMap();
               }),
               (OrderedMap.prototype.set = function (e, t) {
                 return updateOrderedMap(this, e, t);
@@ -5473,14 +5473,14 @@
               return null == e
                 ? emptySet()
                 : isSet(e) && !isOrdered(e)
-                  ? e
-                  : emptySet().withMutations(function (t) {
-                      var r = SetIterable(e);
-                      assertNotInfinite(r.size),
-                        r.forEach(function (e) {
-                          return t.add(e);
-                        });
-                    });
+                ? e
+                : emptySet().withMutations(function (t) {
+                    var r = SetIterable(e);
+                    assertNotInfinite(r.size),
+                      r.forEach(function (e) {
+                        return t.add(e);
+                      });
+                  });
             }
             function isSet(e) {
               return !(!e || !e[oe]);
@@ -5529,13 +5529,13 @@
                   })).length
                   ? this
                   : 0 !== this.size || this.__ownerID || 1 !== t.length
-                    ? this.withMutations(function (e) {
-                        for (var r = 0; r < t.length; r++)
-                          SetIterable(t[r]).forEach(function (t) {
-                            return e.add(t);
-                          });
-                      })
-                    : this.constructor(t[0]);
+                  ? this.withMutations(function (e) {
+                      for (var r = 0; r < t.length; r++)
+                        SetIterable(t[r]).forEach(function (t) {
+                          return e.add(t);
+                        });
+                    })
+                  : this.constructor(t[0]);
               }),
               (Set.prototype.intersect = function () {
                 var t = e.call(arguments, 0);
@@ -5611,10 +5611,10 @@
               return e.__ownerID
                 ? ((e.size = t.size), (e._map = t), e)
                 : t === e._map
-                  ? e
-                  : 0 === t.size
-                    ? e.__empty()
-                    : e.__make(t);
+                ? e
+                : 0 === t.size
+                ? e.__empty()
+                : e.__make(t);
             }
             function makeSet(e, t) {
               var r = Object.create(ae);
@@ -5629,14 +5629,14 @@
               return null == e
                 ? emptyOrderedSet()
                 : isOrderedSet(e)
-                  ? e
-                  : emptyOrderedSet().withMutations(function (t) {
-                      var r = SetIterable(e);
-                      assertNotInfinite(r.size),
-                        r.forEach(function (e) {
-                          return t.add(e);
-                        });
-                    });
+                ? e
+                : emptyOrderedSet().withMutations(function (t) {
+                    var r = SetIterable(e);
+                    assertNotInfinite(r.size),
+                      r.forEach(function (e) {
+                        return t.add(e);
+                      });
+                  });
             }
             function isOrderedSet(e) {
               return isSet(e) && isOrdered(e);
@@ -5676,8 +5676,8 @@
               return null == e
                 ? emptyStack()
                 : isStack(e)
-                  ? e
-                  : emptyStack().unshiftAll(e);
+                ? e
+                : emptyStack().unshiftAll(e);
             }
             function isStack(e) {
               return !(!e || !e[fe]);
@@ -5752,12 +5752,12 @@
                 return 0 === this.size
                   ? this
                   : this.__ownerID
-                    ? ((this.size = 0),
-                      (this._head = void 0),
-                      (this.__hash = void 0),
-                      (this.__altered = !0),
-                      this)
-                    : emptyStack();
+                  ? ((this.size = 0),
+                    (this._head = void 0),
+                    (this.__hash = void 0),
+                    (this.__altered = !0),
+                    this)
+                  : emptyStack();
               }),
               (Stack.prototype.slice = function (e, t) {
                 if (wholeSlice(e, t, this.size)) return this;
@@ -5777,8 +5777,8 @@
                 return e === this.__ownerID
                   ? this
                   : e
-                    ? makeStack(this.size, this._head, e, this.__hash)
-                    : ((this.__ownerID = e), (this.__altered = !1), this);
+                  ? makeStack(this.size, this._head, e, this.__hash)
+                  : ((this.__ownerID = e), (this.__altered = !1), this);
               }),
               (Stack.prototype.__iterate = function (e, t) {
                 if (t) return this.reverse().__iterate(e);
@@ -5899,8 +5899,8 @@
                   return isIndexed(this)
                     ? this.toIndexedSeq()
                     : isKeyed(this)
-                      ? this.toKeyedSeq()
-                      : this.toSetSeq();
+                    ? this.toKeyedSeq()
+                    : this.toSetSeq();
                 },
                 toStack: function () {
                   return Stack(isKeyed(this) ? this.valueSeq() : this);
@@ -6258,12 +6258,12 @@
                           n = (n + hashMerge(hash(e), hash(t))) | 0;
                         }
                     : t
-                      ? function (e) {
-                          n = (31 * n + hash(e)) | 0;
-                        }
-                      : function (e) {
-                          n = (n + hash(e)) | 0;
-                        },
+                    ? function (e) {
+                        n = (31 * n + hash(e)) | 0;
+                      }
+                    : function (e) {
+                        n = (n + hash(e)) | 0;
+                      },
                 ),
                 n,
               );
@@ -6745,8 +6745,8 @@
                 ? '[object Undefined]'
                 : '[object Null]'
               : a && a in Object(e)
-                ? i(e)
-                : o(e);
+              ? i(e)
+              : o(e);
           };
         },
         13: (e) => {
@@ -6912,12 +6912,12 @@
             return 'function' == typeof e
               ? e
               : null == e
-                ? o
-                : 'object' == typeof e
-                  ? a(e)
-                    ? i(e[0], e[1])
-                    : n(e)
-                  : s(e);
+              ? o
+              : 'object' == typeof e
+              ? a(e)
+                ? i(e[0], e[1])
+                : n(e)
+              : s(e);
           };
         },
         280: (e, t, r) => {
@@ -8319,11 +8319,11 @@
               ? (e = n(e)) === i || e === -1 / 0
                 ? 17976931348623157e292 * (e < 0 ? -1 : 1)
                 : e == e
-                  ? e
-                  : 0
-              : 0 === e
                 ? e
-                : 0;
+                : 0
+              : 0 === e
+              ? e
+              : 0;
           };
         },
         554: (e, t, r) => {
@@ -8355,8 +8355,8 @@
             return r || u.test(e)
               ? c(e.slice(2), r ? 2 : 8)
               : a.test(e)
-                ? NaN
-                : +e;
+              ? NaN
+              : +e;
           };
         },
         9833: (e, t, r) => {
@@ -8790,8 +8790,8 @@
                 return null === e || 'object' != typeof e
                   ? null
                   : 'function' == typeof (e = (h && e[h]) || e['@@iterator'])
-                    ? e
-                    : null;
+                  ? e
+                  : null;
               })(e)),
               'function' == typeof f)
             )
@@ -9119,8 +9119,8 @@
             return 0 === e
               ? (t & r) | (~t & n)
               : 2 === e
-                ? (t & r) | (t & n) | (r & n)
-                : t ^ r ^ n;
+              ? (t & r) | (t & n) | (r & n)
+              : t ^ r ^ n;
           }
           n(Sha, i),
             (Sha.prototype.init = function () {
@@ -9198,8 +9198,8 @@
             return 0 === e
               ? (t & r) | (~t & n)
               : 2 === e
-                ? (t & r) | (t & n) | (r & n)
-                : t ^ r ^ n;
+              ? (t & r) | (t & n) | (r & n)
+              : t ^ r ^ n;
           }
           n(Sha1, i),
             (Sha1.prototype.init = function () {
@@ -10863,8 +10863,8 @@
                     ? Number.POSITIVE_INFINITY
                     : Number.NEGATIVE_INFINITY
                   : '.nan' === t
-                    ? NaN
-                    : r * parseFloat(t, 10)
+                  ? NaN
+                  : r * parseFloat(t, 10)
               );
             },
             predicate: function isFloat(e) {
@@ -10998,8 +10998,8 @@
                     s.push((a >> 8) & 255),
                     s.push(255 & a))
                   : 18 === r
-                    ? (s.push((a >> 10) & 255), s.push((a >> 2) & 255))
-                    : 12 === r && s.push((a >> 4) & 255),
+                  ? (s.push((a >> 10) & 255), s.push((a >> 2) & 255))
+                  : 12 === r && s.push((a >> 4) & 255),
                 new Uint8Array(s)
               );
             },
@@ -11030,15 +11030,15 @@
                     (n += a[(i >> 6) & 63]),
                     (n += a[63 & i]))
                   : 2 === r
-                    ? ((n += a[(i >> 10) & 63]),
-                      (n += a[(i >> 4) & 63]),
-                      (n += a[(i << 2) & 63]),
-                      (n += a[64]))
-                    : 1 === r &&
-                      ((n += a[(i >> 2) & 63]),
-                      (n += a[(i << 4) & 63]),
-                      (n += a[64]),
-                      (n += a[64])),
+                  ? ((n += a[(i >> 10) & 63]),
+                    (n += a[(i >> 4) & 63]),
+                    (n += a[(i << 2) & 63]),
+                    (n += a[64]))
+                  : 1 === r &&
+                    ((n += a[(i >> 2) & 63]),
+                    (n += a[(i << 4) & 63]),
+                    (n += a[64]),
+                    (n += a[64])),
                 n
               );
             },
@@ -11159,45 +11159,45 @@
           return 48 <= e && e <= 57
             ? e - 48
             : 97 <= (t = 32 | e) && t <= 102
-              ? t - 97 + 10
-              : -1;
+            ? t - 97 + 10
+            : -1;
         }
         function simpleEscapeSequence(e) {
           return 48 === e
             ? '\0'
             : 97 === e
-              ? ''
-              : 98 === e
-                ? '\b'
-                : 116 === e || 9 === e
-                  ? '\t'
-                  : 110 === e
-                    ? '\n'
-                    : 118 === e
-                      ? '\v'
-                      : 102 === e
-                        ? '\f'
-                        : 114 === e
-                          ? '\r'
-                          : 101 === e
-                            ? ''
-                            : 32 === e
-                              ? ' '
-                              : 34 === e
-                                ? '"'
-                                : 47 === e
-                                  ? '/'
-                                  : 92 === e
-                                    ? '\\'
-                                    : 78 === e
-                                      ? ''
-                                      : 95 === e
-                                        ? ' '
-                                        : 76 === e
-                                          ? '\u2028'
-                                          : 80 === e
-                                            ? '\u2029'
-                                            : '';
+            ? ''
+            : 98 === e
+            ? '\b'
+            : 116 === e || 9 === e
+            ? '\t'
+            : 110 === e
+            ? '\n'
+            : 118 === e
+            ? '\v'
+            : 102 === e
+            ? '\f'
+            : 114 === e
+            ? '\r'
+            : 101 === e
+            ? ''
+            : 32 === e
+            ? ' '
+            : 34 === e
+            ? '"'
+            : 47 === e
+            ? '/'
+            : 92 === e
+            ? '\\'
+            : 78 === e
+            ? ''
+            : 95 === e
+            ? ' '
+            : 76 === e
+            ? '\u2028'
+            : 80 === e
+            ? '\u2029'
+            : '';
         }
         function charFromCodepoint(e) {
           return e <= 65535
@@ -11376,9 +11376,9 @@
           10 === (t = e.input.charCodeAt(e.position))
             ? e.position++
             : 13 === t
-              ? (e.position++,
-                10 === e.input.charCodeAt(e.position) && e.position++)
-              : throwError(e, 'a line break is expected'),
+            ? (e.position++,
+              10 === e.input.charCodeAt(e.position) && e.position++)
+            : throwError(e, 'a line break is expected'),
             (e.line += 1),
             (e.lineStart = e.position),
             (e.firstTabInLine = -1);
@@ -11485,8 +11485,8 @@
             60 === (i = e.input.charCodeAt(++e.position))
               ? ((o = !0), (i = e.input.charCodeAt(++e.position)))
               : 33 === i
-                ? ((a = !0), (r = '!!'), (i = e.input.charCodeAt(++e.position)))
-                : (r = '!'),
+              ? ((a = !0), (r = '!!'), (i = e.input.charCodeAt(++e.position)))
+              : (r = '!'),
             (t = e.position),
             o)
           ) {
@@ -11533,12 +11533,12 @@
             o
               ? (e.tag = n)
               : je.call(e.tagMap, r)
-                ? (e.tag = e.tagMap[r] + n)
-                : '!' === r
-                  ? (e.tag = '!' + n)
-                  : '!!' === r
-                    ? (e.tag = 'tag:yaml.org,2002:' + n)
-                    : throwError(e, 'undeclared tag handle "' + r + '"'),
+              ? (e.tag = e.tagMap[r] + n)
+              : '!' === r
+              ? (e.tag = '!' + n)
+              : '!!' === r
+              ? (e.tag = 'tag:yaml.org,2002:' + n)
+              : throwError(e, 'undeclared tag handle "' + r + '"'),
             !0
           );
         }
@@ -11590,8 +11590,8 @@
               e.lineIndent > t
                 ? (d = 1)
                 : e.lineIndent === t
-                  ? (d = 0)
-                  : e.lineIndent < t && (d = -1)),
+                ? (d = 0)
+                : e.lineIndent < t && (d = -1)),
             1 === d)
           )
             for (; readTagProperty(e) || readAnchorProperty(e); )
@@ -11601,8 +11601,8 @@
                   e.lineIndent > t
                     ? (d = 1)
                     : e.lineIndent === t
-                      ? (d = 0)
-                      : e.lineIndent < t && (d = -1))
+                    ? (d = 0)
+                    : e.lineIndent < t && (d = -1))
                 : (s = !1);
           if (
             (s && (s = _ || i),
@@ -11721,11 +11721,11 @@
                                 (v = !0),
                                 (i = !0))
                               : v
-                                ? ((v = !1), (i = !0))
-                                : throwError(
-                                    e,
-                                    'incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line',
-                                  ),
+                              ? ((v = !1), (i = !0))
+                              : throwError(
+                                  e,
+                                  'incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line',
+                                ),
                               (e.position += 1),
                               (c = n);
                           if (
@@ -11832,10 +11832,10 @@
                         c
                           ? storeMappingPair(e, o, v, l, f, h, r, n, i)
                           : s
-                            ? o.push(
-                                storeMappingPair(e, null, v, l, f, h, r, n, i),
-                              )
-                            : o.push(f),
+                          ? o.push(
+                              storeMappingPair(e, null, v, l, f, h, r, n, i),
+                            )
+                          : o.push(f),
                         skipSeparationSpace(e, !0, t),
                         44 === (p = e.input.charCodeAt(e.position))
                           ? ((d = !0), (p = e.input.charCodeAt(++e.position)))
@@ -11891,11 +11891,11 @@
                                   'bad explicit indentation width of a block scalar; it cannot be less than one',
                                 )
                               : c
-                                ? throwError(
-                                    e,
-                                    'repeat of an indentation width identifier',
-                                  )
-                                : ((f = t + i - 1), (c = !0));
+                              ? throwError(
+                                  e,
+                                  'repeat of an indentation width identifier',
+                                )
+                              : ((f = t + i - 1), (c = !0));
                           }
                         if (is_WHITE_SPACE(o)) {
                           do {
@@ -11937,11 +11937,11 @@
                                       u ? 1 + l : l,
                                     )))
                                   : h
-                                    ? ((h = !1),
-                                      (e.result += te.repeat('\n', l + 1)))
-                                    : 0 === l
-                                      ? u && (e.result += ' ')
-                                      : (e.result += te.repeat('\n', l))
+                                  ? ((h = !1),
+                                    (e.result += te.repeat('\n', l + 1)))
+                                  : 0 === l
+                                  ? u && (e.result += ' ')
+                                  : (e.result += te.repeat('\n', l))
                                 : (e.result += te.repeat('\n', u ? 1 + l : l)),
                                 u = !0,
                                 c = !0,
@@ -11984,12 +11984,12 @@
                               ),
                               (n = i = e.position))
                             : e.position === e.lineStart &&
-                                testDocumentSeparator(e)
-                              ? throwError(
-                                  e,
-                                  'unexpected end of the document within a single quoted scalar',
-                                )
-                              : (e.position++, (i = e.position));
+                              testDocumentSeparator(e)
+                            ? throwError(
+                                e,
+                                'unexpected end of the document within a single quoted scalar',
+                              )
+                            : (e.position++, (i = e.position));
                       throwError(
                         e,
                         'unexpected end of the stream within a single quoted scalar',
@@ -12026,10 +12026,10 @@
                               120 === (u = s)
                                 ? 2
                                 : 117 === u
-                                  ? 4
-                                  : 85 === u
-                                    ? 8
-                                    : 0) > 0
+                                ? 4
+                                : 85 === u
+                                ? 8
+                                : 0) > 0
                           ) {
                             for (i = a, o = 0; i > 0; i--)
                               (a = fromHexCode(
@@ -12052,12 +12052,12 @@
                               ),
                               (r = n = e.position))
                             : e.position === e.lineStart &&
-                                testDocumentSeparator(e)
-                              ? throwError(
-                                  e,
-                                  'unexpected end of the document within a double quoted scalar',
-                                )
-                              : (e.position++, (n = e.position));
+                              testDocumentSeparator(e)
+                            ? throwError(
+                                e,
+                                'unexpected end of the document within a double quoted scalar',
+                              )
+                            : (e.position++, (n = e.position));
                       }
                       throwError(
                         e,
@@ -12066,138 +12066,136 @@
                     })(e, h)
                       ? (g = !0)
                       : !(function readAlias(e) {
-                            var t, r, n;
-                            if (42 !== (n = e.input.charCodeAt(e.position)))
-                              return !1;
-                            for (
-                              n = e.input.charCodeAt(++e.position),
-                                t = e.position;
-                              0 !== n &&
-                              !is_WS_OR_EOL(n) &&
-                              !is_FLOW_INDICATOR(n);
+                          var t, r, n;
+                          if (42 !== (n = e.input.charCodeAt(e.position)))
+                            return !1;
+                          for (
+                            n = e.input.charCodeAt(++e.position),
+                              t = e.position;
+                            0 !== n &&
+                            !is_WS_OR_EOL(n) &&
+                            !is_FLOW_INDICATOR(n);
 
-                            )
-                              n = e.input.charCodeAt(++e.position);
-                            return (
-                              e.position === t &&
-                                throwError(
-                                  e,
-                                  'name of an alias node must contain at least one character',
-                                ),
-                              (r = e.input.slice(t, e.position)),
-                              je.call(e.anchorMap, r) ||
-                                throwError(e, 'unidentified alias "' + r + '"'),
-                              (e.result = e.anchorMap[r]),
-                              skipSeparationSpace(e, !0, -1),
-                              !0
-                            );
-                          })(e)
-                        ? (function readPlainScalar(e, t, r) {
-                            var n,
-                              i,
-                              o,
-                              a,
-                              s,
-                              u,
-                              c,
-                              f,
-                              l = e.kind,
-                              h = e.result;
-                            if (
-                              is_WS_OR_EOL(
-                                (f = e.input.charCodeAt(e.position)),
-                              ) ||
-                              is_FLOW_INDICATOR(f) ||
-                              35 === f ||
-                              38 === f ||
-                              42 === f ||
-                              33 === f ||
-                              124 === f ||
-                              62 === f ||
-                              39 === f ||
-                              34 === f ||
-                              37 === f ||
-                              64 === f ||
-                              96 === f
-                            )
-                              return !1;
-                            if (
-                              (63 === f || 45 === f) &&
-                              (is_WS_OR_EOL(
-                                (n = e.input.charCodeAt(e.position + 1)),
-                              ) ||
-                                (r && is_FLOW_INDICATOR(n)))
-                            )
-                              return !1;
-                            for (
-                              e.kind = 'scalar',
-                                e.result = '',
-                                i = o = e.position,
-                                a = !1;
-                              0 !== f;
+                          )
+                            n = e.input.charCodeAt(++e.position);
+                          return (
+                            e.position === t &&
+                              throwError(
+                                e,
+                                'name of an alias node must contain at least one character',
+                              ),
+                            (r = e.input.slice(t, e.position)),
+                            je.call(e.anchorMap, r) ||
+                              throwError(e, 'unidentified alias "' + r + '"'),
+                            (e.result = e.anchorMap[r]),
+                            skipSeparationSpace(e, !0, -1),
+                            !0
+                          );
+                        })(e)
+                      ? (function readPlainScalar(e, t, r) {
+                          var n,
+                            i,
+                            o,
+                            a,
+                            s,
+                            u,
+                            c,
+                            f,
+                            l = e.kind,
+                            h = e.result;
+                          if (
+                            is_WS_OR_EOL(
+                              (f = e.input.charCodeAt(e.position)),
+                            ) ||
+                            is_FLOW_INDICATOR(f) ||
+                            35 === f ||
+                            38 === f ||
+                            42 === f ||
+                            33 === f ||
+                            124 === f ||
+                            62 === f ||
+                            39 === f ||
+                            34 === f ||
+                            37 === f ||
+                            64 === f ||
+                            96 === f
+                          )
+                            return !1;
+                          if (
+                            (63 === f || 45 === f) &&
+                            (is_WS_OR_EOL(
+                              (n = e.input.charCodeAt(e.position + 1)),
+                            ) ||
+                              (r && is_FLOW_INDICATOR(n)))
+                          )
+                            return !1;
+                          for (
+                            e.kind = 'scalar',
+                              e.result = '',
+                              i = o = e.position,
+                              a = !1;
+                            0 !== f;
 
-                            ) {
-                              if (58 === f) {
+                          ) {
+                            if (58 === f) {
+                              if (
+                                is_WS_OR_EOL(
+                                  (n = e.input.charCodeAt(e.position + 1)),
+                                ) ||
+                                (r && is_FLOW_INDICATOR(n))
+                              )
+                                break;
+                            } else if (35 === f) {
+                              if (
+                                is_WS_OR_EOL(e.input.charCodeAt(e.position - 1))
+                              )
+                                break;
+                            } else {
+                              if (
+                                (e.position === e.lineStart &&
+                                  testDocumentSeparator(e)) ||
+                                (r && is_FLOW_INDICATOR(f))
+                              )
+                                break;
+                              if (is_EOL(f)) {
                                 if (
-                                  is_WS_OR_EOL(
-                                    (n = e.input.charCodeAt(e.position + 1)),
-                                  ) ||
-                                  (r && is_FLOW_INDICATOR(n))
-                                )
-                                  break;
-                              } else if (35 === f) {
-                                if (
-                                  is_WS_OR_EOL(
-                                    e.input.charCodeAt(e.position - 1),
-                                  )
-                                )
-                                  break;
-                              } else {
-                                if (
-                                  (e.position === e.lineStart &&
-                                    testDocumentSeparator(e)) ||
-                                  (r && is_FLOW_INDICATOR(f))
-                                )
-                                  break;
-                                if (is_EOL(f)) {
-                                  if (
-                                    ((s = e.line),
-                                    (u = e.lineStart),
-                                    (c = e.lineIndent),
-                                    skipSeparationSpace(e, !1, -1),
-                                    e.lineIndent >= t)
-                                  ) {
-                                    (a = !0),
-                                      (f = e.input.charCodeAt(e.position));
-                                    continue;
-                                  }
-                                  (e.position = o),
-                                    (e.line = s),
-                                    (e.lineStart = u),
-                                    (e.lineIndent = c);
-                                  break;
+                                  ((s = e.line),
+                                  (u = e.lineStart),
+                                  (c = e.lineIndent),
+                                  skipSeparationSpace(e, !1, -1),
+                                  e.lineIndent >= t)
+                                ) {
+                                  (a = !0),
+                                    (f = e.input.charCodeAt(e.position));
+                                  continue;
                                 }
+                                (e.position = o),
+                                  (e.line = s),
+                                  (e.lineStart = u),
+                                  (e.lineIndent = c);
+                                break;
                               }
-                              a &&
-                                (captureSegment(e, i, o, !1),
-                                writeFoldedLines(e, e.line - s),
-                                (i = o = e.position),
-                                (a = !1)),
-                                is_WHITE_SPACE(f) || (o = e.position + 1),
-                                (f = e.input.charCodeAt(++e.position));
                             }
-                            return (
-                              captureSegment(e, i, o, !1),
-                              !!e.result || ((e.kind = l), (e.result = h), !1)
-                            );
-                          })(e, h, Ne === r) &&
-                          ((g = !0), null === e.tag && (e.tag = '?'))
-                        : ((g = !0),
-                          (null === e.tag && null === e.anchor) ||
-                            throwError(
-                              e,
-                              'alias node should not have any properties',
-                            )),
+                            a &&
+                              (captureSegment(e, i, o, !1),
+                              writeFoldedLines(e, e.line - s),
+                              (i = o = e.position),
+                              (a = !1)),
+                              is_WHITE_SPACE(f) || (o = e.position + 1),
+                              (f = e.input.charCodeAt(++e.position));
+                          }
+                          return (
+                            captureSegment(e, i, o, !1),
+                            !!e.result || ((e.kind = l), (e.result = h), !1)
+                          );
+                        })(e, h, Ne === r) &&
+                        ((g = !0), null === e.tag && (e.tag = '?'))
+                      : ((g = !0),
+                        (null === e.tag && null === e.anchor) ||
+                          throwError(
+                            e,
+                            'alias node should not have any properties',
+                          )),
                     null !== e.anchor && (e.anchorMap[e.anchor] = e.result))
                 : 0 === d && (g = s && readBlockSequence(e, p))),
             null === e.tag)
@@ -12627,17 +12625,17 @@
             ? r > 9 && needIndentIndicator(e)
               ? Nt
               : a
-                ? o === Ct
-                  ? Nt
-                  : qt
-                : h
-                  ? jt
-                  : Lt
-            : !_ || a || i(e)
               ? o === Ct
                 ? Nt
                 : qt
-              : Mt;
+              : h
+              ? jt
+              : Lt
+            : !_ || a || i(e)
+            ? o === Ct
+              ? Nt
+              : qt
+            : Mt;
         }
         function writeScalar(e, t, r, n, i) {
           e.dump = (function () {
@@ -12742,8 +12740,8 @@
             (n && ('\n' === e[e.length - 2] || '\n' === e)
               ? '+'
               : n
-                ? ''
-                : '-') +
+              ? ''
+              : '-') +
             '\n'
           );
         }
@@ -12957,8 +12955,8 @@
                 '!' === e.tag[0]
                   ? '!' + s
                   : 'tag:yaml.org,2002:' === s.slice(0, 18)
-                    ? '!!' + s.slice(18)
-                    : '!<' + s + '>'),
+                  ? '!!' + s.slice(18)
+                  : '!<' + s + '>'),
               (e.dump = s + ' ' + e.dump));
           }
           return !0;
