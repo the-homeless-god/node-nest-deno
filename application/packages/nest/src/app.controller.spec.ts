@@ -78,12 +78,14 @@ describe('AppController', () => {
   });
 
   describe('GET: hello', () => {
-    it("should return hello message", () => {
+    it('should return hello message', () => {
       expect(appController.hello('name')).toStrictEqual('Hello name!');
     });
 
-    it("should return error when no hello-message provided", () => {
-      expect(() => appController.hello(undefined)).toThrow('user name is not provided yet');
+    it('should return error when no hello-message provided', () => {
+      expect(() => appController.hello(undefined)).toThrow(
+        'user name is not provided yet',
+      );
     });
-  })
+  });
 });

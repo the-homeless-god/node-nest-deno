@@ -1,20 +1,20 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
 export const getEnironmentKey = (name: string): string => {
-  const env = process.env[name]
+  const env = process.env[name];
 
   if (env) {
-    return env
+    return env;
   }
 
-  const error = new Error(`${name} is not defined at .env file`)
-  console.error(error)
+  const error = new Error(`${name} is not defined at .env file`);
+  console.error(error);
 
-  throw error
-}
+  throw error;
+};
 
-export const URL: string = getEnironmentKey('URL')
-export const PORT: string = getEnironmentKey('PORT')
-export const FULL_URL = `${URL}:${PORT}`
+export const URL: string = getEnironmentKey('URL');
+export const PORT: string = getEnironmentKey('PORT');
+export const FULL_URL = `${URL}:${PORT}`;

@@ -1,17 +1,17 @@
-import { Controller, Get, Query, Res } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import {
   GetConfigDto,
   GetStatusDto,
   GetVersionDto,
-  getHelloMessage
+  getHelloMessage,
 } from '@the-homeless-god/node-nest-common';
 
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Get('version')
   version(): GetVersionDto {

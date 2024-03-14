@@ -13,7 +13,5 @@ export const getRouter = (): Router => {
 export const initRouter = (application: Application): void => {
   const router = getRouter();
 
-
   application.use(router);
-
 };

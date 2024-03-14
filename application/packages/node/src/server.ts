@@ -6,9 +6,7 @@ import getRoutes from 'express-list-endpoints';
 
 import { initRouter } from './router';
 import { SERVER_HAS_BEEN_HOSTED } from './utils/dictionary';
-import {
-  PORT,
-} from './utils/environment';
+import { PORT } from './utils/environment';
 
 const configurateApplication = (application: Application): Application => {
   application.use(

@@ -1,4 +1,4 @@
-import { getHelloMessage } from '@the-homeless-god/node-nest-common'
+import { getHelloMessage } from '@the-homeless-god/node-nest-common';
 import { Router } from 'express';
 
 import { Routers } from './types';
