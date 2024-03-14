@@ -34,7 +34,7 @@ describe('AppController', () => {
       node: {
         local: {
           host: 'localhost',
-          port: 3000,
+          port: 3001,
           protocol: 'http://',
         },
       },
@@ -42,7 +42,7 @@ describe('AppController', () => {
       deno: {
         local: {
           host: 'localhost',
-          port: 3000,
+          port: 3002,
           protocol: 'http://',
         },
       },
@@ -76,4 +76,14 @@ describe('AppController', () => {
       message: 'ok',
     });
   });
+
+  describe('GET: hello', () => {
+    it("should return hello message", () => {
+      expect(appController.hello('name')).toStrictEqual('Hello name!');
+    });
+
+    it("should return error when no hello-message provided", () => {
+      expect(() => appController.hello(undefined)).toThrow('user name is not provided yet');
+    });
+  })
 });

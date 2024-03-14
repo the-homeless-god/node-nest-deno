@@ -1,9 +1,10 @@
-import { Controller, Get, InternalServerErrorException, Query, Res } from '@nestjs/common';
+import { Controller, Get, Query, Res } from '@nestjs/common';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import {
   GetConfigDto,
   GetStatusDto,
   GetVersionDto,
+  getHelloMessage
 } from '@the-homeless-god/node-nest-deno-common';
 
 import { AppService } from './app.service';
@@ -32,13 +33,7 @@ export class AppController {
   @Get('hello')
   @ApiOperation({ summary: 'Greetings for provided username' })
   @ApiResponse({ status: 200 })
-  hello(@Query('user-name') username: string, @Res() response) {
-    if (username.length === 0) {
-      throw new InternalServerErrorException();
-    }
-
-    const output = `Hello ${username}!`;
-
-    response.send(output);
+  hello(@Query('user-name') username: string) {
+    return getHelloMessage(username);
   }
 }
