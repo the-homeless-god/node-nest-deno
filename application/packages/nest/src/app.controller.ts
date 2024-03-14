@@ -5,7 +5,7 @@ import {
   GetStatusDto,
   GetVersionDto,
   getHelloMessage
-} from '@the-homeless-god/node-nest-deno-common';
+} from '@the-homeless-god/node-nest-common';
 
 import { AppService } from './app.service';
 

@@ -1,7 +1,7 @@
 {
-  "name": "@the-homeless-god/node-nest-deno-common",
+  "name": "@the-homeless-god/node-nest-common",
   "author": "Marat Zimnurov <zimtir@mail.ru>",
-  "homepage": "https://github.com/the-homeless-god/node-nest-deno#readme",
+  "homepage": "https://github.com/the-homeless-god/node-nest#readme",
   "license": "ISC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/the-homeless-god/node-nest-deno.git"
+    "url": "git+https://github.com/the-homeless-god/node-nest.git"
   },
   "scripts": {
     "build": "rm -rf dist && tsc",
@@ -27,7 +27,7 @@
     "test:coverage": "jest --ci --coverage --json --testLocationInResults --outputFile=report.json --passWithNoTests"
   },
   "bugs": {
-    "url": "https://github.com/the-homeless-god/node-nest-deno/issues"
+    "url": "https://github.com/the-homeless-god/node-nest/issues"
   },
   "dependencies": {
     "@nestjs/swagger": "^7.1.14",

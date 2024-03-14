@@ -1,6 +1,6 @@
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { servers } from '@the-homeless-god/node-nest-deno-common';
+import { servers } from '@the-homeless-god/node-nest-common';
 
 import * as swaggerStats from 'swagger-stats';
 

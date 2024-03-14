@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { getEnvironmentConfiguration } from '@the-homeless-god/node-nest-deno-common';
+import { getEnvironmentConfiguration } from '@the-homeless-god/node-nest-common';
 
 import { AppModule } from './app.module';
 

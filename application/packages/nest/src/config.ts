@@ -1,7 +1,7 @@
 import {
   config as commonConfig,
   getEnvironmentConfiguration,
-} from '@the-homeless-god/node-nest-deno-common';
+} from '@the-homeless-god/node-nest-common';
 
 const environmentConfig = getEnvironmentConfiguration();
 

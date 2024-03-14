@@ -1,5 +1,5 @@
 {
-  "name": "@the-homeless-god/node-nest-deno-node",
+  "name": "@the-homeless-god/node-nest-node",
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
@@ -63,7 +63,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/the-homeless-god/node-nest-denogit"
+    "url": "https://github.com/the-homeless-god/node-nestgit"
   },
-  "homepage": "https://github.com/the-homeless-god/node-nest-deno"
+  "homepage": "https://github.com/the-homeless-god/node-nest"
 }
