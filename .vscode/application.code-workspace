@@ -1,0 +1,70 @@
+{
+  "folders": [
+    {
+      "path": "../application/packages/node",
+      "name": "node"
+    },
+    {
+      "path": "../application/packages/deno",
+      "name": "deno"
+    },
+    {
+      "path": "../application/packages/nest",
+      "name": "nest"
+    },
+    {
+      "path": "../application/packages/common",
+      "name": "common"
+    },
+    {
+      "path": "../application",
+      "name": "root"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/swagger-static": true,
+      "**/tsconfig.json": true,
+      "**/tsconfig.build.json": true,
+      "**/.env.production": true,
+      "**/.gitignore": true,
+      "**/*.prettierignore": true,
+      "**/package-lock.json": true,
+      "**/package.json": true,
+      "**/.babelrc": true,
+      "**/nest-cli.json": true,
+    },
+    "eslint.workingDirectories": [
+      "../application",
+      "../application/packages/deno",
+      "../application/packages/node",
+      "../application/packages/nest",
+      "../application/packages/common"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "christian-kohler.npm-intellisense",
+      "editorconfig.editorconfig",
+      "rvest.vs-code-prettier-eslint",
+      "esbenp.prettier-vscode",
+      "eamodio.gitlens",
+      "ms-vscode.vscode-typescript-next",
+      "raynigon.nginx-formatter",
+      "davidanson.vscode-markdownlint",
+      "yzhang.markdown-all-in-one",
+      "foxundermoon.shell-format",
+      "shakram02.bash-beautify",
+      "joshbolduc.commitlint",
+      "dbaeumer.vscode-eslint",
+      "xabikos.javascriptsnippets",
+      "firsttris.vscode-jest-runner",
+      "alex-young.pm2-explorer",
+      "stylelint.vscode-stylelint",
+      "wayou.vscode-todo-highlight",
+      "redhat.vscode-yaml"
+    ]
+  }
+}

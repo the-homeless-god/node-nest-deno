@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-typescript-next",
+    "davidanson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    "foxundermoon.shell-format"
+  ]
+}
