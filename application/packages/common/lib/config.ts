@@ -35,13 +35,6 @@ export const getEnvironmentConfiguration = () => {
       },
     },
 
-    deno: {
-      local: {
-        host: 'localhost',
-        port: 3002,
-        protocol: 'http://',
-      },
-    },
     isDevelopment: process.env.NODE_ENV === 'development',
     isTest: process.env.NODE_ENV === 'test',
     isLocal: process.env.IS_LOCAL === 'true',

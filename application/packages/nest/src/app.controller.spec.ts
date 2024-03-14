@@ -39,14 +39,6 @@ describe('AppController', () => {
         },
       },
 
-      deno: {
-        local: {
-          host: 'localhost',
-          port: 3002,
-          protocol: 'http://',
-        },
-      },
-
       isDevelopment: false,
       isLocal: false,
       isTest: true,
