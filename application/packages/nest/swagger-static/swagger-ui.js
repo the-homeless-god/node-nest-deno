@@ -2,10 +2,10 @@
   'object' == typeof exports && 'object' == typeof module
     ? (module.exports = t())
     : 'function' == typeof define && define.amd
-    ? define([], t)
-    : 'object' == typeof exports
-    ? (exports.SwaggerUICore = t())
-    : (e.SwaggerUICore = t());
+      ? define([], t)
+      : 'object' == typeof exports
+        ? (exports.SwaggerUICore = t())
+        : (e.SwaggerUICore = t());
 })(this, () =>
   (() => {
     'use strict';
@@ -746,19 +746,19 @@
                         return 'Value must be a DateTime';
                     })(e)
                   : 'uuid' === m
-                  ? ((e) => {
-                      if (
-                        ((e = e.toString().toLowerCase()),
-                        !/^[{(]?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[)}]?$/.test(
-                          e,
-                        ))
-                      )
-                        return 'Value must be a Guid';
-                    })(e)
-                  : ((e) => {
-                      if (e && 'string' != typeof e)
-                        return 'Value must be a string';
-                    })(e)),
+                    ? ((e) => {
+                        if (
+                          ((e = e.toString().toLowerCase()),
+                          !/^[{(]?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[)}]?$/.test(
+                            e,
+                          ))
+                        )
+                          return 'Value must be a Guid';
+                      })(e)
+                    : ((e) => {
+                        if (e && 'string' != typeof e)
+                          return 'Value must be a string';
+                      })(e)),
               !t)
             )
               return s;
@@ -1126,8 +1126,8 @@
             return Array.isArray(t)
               ? t.reduce((e, t) => t(e, this.getSystem()))
               : void 0 !== e
-              ? this.system.components[e]
-              : this.system.components;
+                ? this.system.components[e]
+                : this.system.components;
           }
           getBoundSelectors(e, t) {
             return objMap(this.getSelectors(), (r, n) => {
@@ -1209,8 +1209,8 @@
             isFunc(e)
               ? callAfterLoad.call(this, e(t), t, { hasLoaded: n })
               : isArray(e)
-              ? e.map((e) => callAfterLoad.call(this, e, t, { hasLoaded: n }))
-              : n
+                ? e.map((e) => callAfterLoad.call(this, e, t, { hasLoaded: n }))
+                : n
           );
         }
         function systemExtend() {
@@ -2014,16 +2014,16 @@
                     return n
                       ? ['operations', r, n]
                       : r
-                      ? ['operations-tag', r]
-                      : [];
+                        ? ['operations-tag', r]
+                        : [];
                   },
                   urlHashArrayFromIsShownKey(e, t) {
                     let [r, n, a] = t;
                     return 'operations' == r
                       ? [n, a]
                       : 'operations-tag' == r
-                      ? [n]
-                      : [];
+                        ? [n]
+                        : [];
                   },
                 },
                 reducers: {
@@ -2146,10 +2146,10 @@
                         r === n.length - 1 && n.length > 1
                           ? e + 'or ' + t
                           : n[r + 1] && n.length > 2
-                          ? e + t + ', '
-                          : n[r + 1]
-                          ? e + t + ' '
-                          : e + t,
+                            ? e + t + ', '
+                            : n[r + 1]
+                              ? e + t + ' '
+                              : e + t,
                       'should be a',
                     );
                   })(t),
@@ -2624,18 +2624,21 @@
               .replace(/\n/g, '^\n'))
               ? e.replace(/-d /g, '-d ^\n')
               : /^[_\/-]/g.test(e)
-              ? e
-              : '"' + e + '"',
+                ? e
+                : '"' + e + '"',
           escapePowershell = (e) =>
             '-d ' === e
               ? e
               : /\n/.test(e)
-              ? '@"\n' +
-                e.replace(/"/g, '\\"').replace(/`/g, '``').replace(/\$/, '`$') +
-                '\n"@'
-              : /^[_\/-]/g.test(e)
-              ? e
-              : "'" + e.replace(/"/g, '""').replace(/'/g, "''") + "'";
+                ? '@"\n' +
+                  e
+                    .replace(/"/g, '\\"')
+                    .replace(/`/g, '``')
+                    .replace(/\$/, '`$') +
+                  '\n"@'
+                : /^[_\/-]/g.test(e)
+                  ? e
+                  : "'" + e.replace(/"/g, '""').replace(/'/g, "''") + "'";
         const curlify = function (e, t, r) {
             let n =
                 arguments.length > 3 && void 0 !== arguments[3]
@@ -2701,10 +2704,10 @@
                           `${r}=${t.data}${t.type ? `;type=${t.type}` : ''}`,
                         )
                       : t instanceof U.File
-                      ? addWords(
-                          `${r}=@${t.name}${t.type ? `;type=${t.type}` : ''}`,
-                        )
-                      : addWords(`${r}=${t}`);
+                        ? addWords(
+                            `${r}=@${t.name}${t.type ? `;type=${t.type}` : ''}`,
+                          )
+                        : addWords(`${r}=${t}`);
                 }
               else if (l instanceof U.File)
                 addNewLine(),
@@ -3225,10 +3228,10 @@
               (m || u || schemaHasAny(cr)
                 ? (i = 'object')
                 : d || schemaHasAny(ir)
-                ? (i = 'array')
-                : schemaHasAny(pr)
-                ? ((i = 'number'), (e.type = 'number'))
-                : a || e.enum || ((i = 'string'), (e.type = 'string')));
+                  ? (i = 'array')
+                  : schemaHasAny(pr)
+                    ? ((i = 'number'), (e.type = 'number'))
+                    : a || e.enum || ((i = 'string'), (e.type = 'string')));
             const handleMinMaxItems = (t) => {
                 if (
                   (null != e?.maxItems && (t = t.slice(0, e?.maxItems)),
@@ -3299,10 +3302,10 @@
                           void 0 !== t
                             ? t
                             : void 0 !== n
-                            ? n
-                            : void 0 !== e
-                            ? e
-                            : primitive(_[r]));
+                              ? n
+                              : void 0 !== e
+                                ? e
+                                : primitive(_[r]));
                       }
                       _[r].xml.name = _[r].xml.name || r;
                     } else _[r] || !1 === u || (_[r] = { xml: { name: r } });
@@ -3578,8 +3581,8 @@
                 /xml/.test(r)
                   ? s.getXmlSampleSchema(t, n, a)
                   : /(yaml|yml)/.test(r)
-                  ? s.getYamlSampleSchema(t, n, r, a)
-                  : s.getJsonSampleSchema(t, n, r, a)
+                    ? s.getYamlSampleSchema(t, n, r, a)
+                    : s.getJsonSampleSchema(t, n, r, a)
               );
             },
           json_schema_5_samples = (e) => {
@@ -3911,10 +3914,10 @@
             o = n.get('consumes_value')
               ? n.get('consumes_value')
               : parametersIncludeType(s, 'file')
-              ? 'multipart/form-data'
-              : parametersIncludeType(s, 'formData')
-              ? 'application/x-www-form-urlencoded'
-              : void 0;
+                ? 'multipart/form-data'
+                : parametersIncludeType(s, 'formData')
+                  ? 'application/x-www-form-urlencoded'
+                  : void 0;
           return (0, I.fromJS)({
             requestContentType: o,
             responseContentType: a,
@@ -4602,8 +4605,8 @@
               return n && a
                 ? e.setIn(['scheme', n, a], r)
                 : n || a
-                ? void 0
-                : e.setIn(['scheme', '_defaultScheme'], r);
+                  ? void 0
+                  : e.setIn(['scheme', '_defaultScheme'], r);
             },
           },
           wrap_actions_updateSpec = (e, t) => {
@@ -5128,20 +5131,18 @@
                     k().createElement(
                       'div',
                       { className: 'modal-ux-content' },
-                      o
-                        .valueSeq()
-                        .map((o, c) =>
-                          k().createElement(l, {
-                            key: c,
-                            AST: s,
-                            definitions: o,
-                            getComponent: r,
-                            errSelectors: n,
-                            authSelectors: e,
-                            authActions: t,
-                            specSelectors: a,
-                          }),
-                        ),
+                      o.valueSeq().map((o, c) =>
+                        k().createElement(l, {
+                          key: c,
+                          AST: s,
+                          definitions: o,
+                          getComponent: r,
+                          errSelectors: n,
+                          authSelectors: e,
+                          authActions: t,
+                          specSelectors: a,
+                        }),
+                      ),
                     ),
                   ),
                 ),
@@ -5996,8 +5997,8 @@
             'implicit' === m
               ? r.preAuthorizeImplicit
               : s.useBasicAuthenticationWithAccessCodeGrant
-              ? r.authorizeAccessCodeWithBasicAuthentication
-              : r.authorizeAccessCodeWithFormParams),
+                ? r.authorizeAccessCodeWithBasicAuthentication
+                : r.authorizeAccessCodeWithFormParams),
             r.authPopup(v, {
               auth: t,
               state: g,
@@ -6634,27 +6635,27 @@
             return 'object' == typeof t && Object.keys(t).length
               ? null
               : this.state.url &&
-                requiresValidationURL(this.state.validatorUrl) &&
-                requiresValidationURL(this.state.url)
-              ? k().createElement(
-                  'span',
-                  { className: 'float-right' },
-                  k().createElement(
-                    'a',
-                    {
-                      target: '_blank',
-                      rel: 'noopener noreferrer',
-                      href: `${r}/debug?url=${encodeURIComponent(
-                        this.state.url,
-                      )}`,
-                    },
-                    k().createElement(ValidatorImage, {
-                      src: `${r}?url=${encodeURIComponent(this.state.url)}`,
-                      alt: 'Online validator badge',
-                    }),
-                  ),
-                )
-              : null;
+                  requiresValidationURL(this.state.validatorUrl) &&
+                  requiresValidationURL(this.state.url)
+                ? k().createElement(
+                    'span',
+                    { className: 'float-right' },
+                    k().createElement(
+                      'a',
+                      {
+                        target: '_blank',
+                        rel: 'noopener noreferrer',
+                        href: `${r}/debug?url=${encodeURIComponent(
+                          this.state.url,
+                        )}`,
+                      },
+                      k().createElement(ValidatorImage, {
+                        src: `${r}?url=${encodeURIComponent(this.state.url)}`,
+                        alt: 'Online validator badge',
+                      }),
+                    ),
+                  )
+                : null;
           }
         }
         class ValidatorImage extends k().Component {
@@ -6687,11 +6688,11 @@
             return this.state.error
               ? k().createElement('img', { alt: 'Error' })
               : this.state.loaded
-              ? k().createElement('img', {
-                  src: this.props.src,
-                  alt: this.props.alt,
-                })
-              : null;
+                ? k().createElement('img', {
+                    src: this.props.src,
+                    alt: this.props.alt,
+                  })
+                : null;
           }
         }
         class Operations extends k().Component {
@@ -7036,8 +7037,8 @@
                 className: S
                   ? 'opblock opblock-deprecated'
                   : E
-                  ? `opblock opblock-${_} is-open`
-                  : `opblock opblock-${_}`,
+                    ? `opblock opblock-${_} is-open`
+                    : `opblock opblock-${_}`,
                 id: escapeDeepLinkPath(V.join('-')),
               },
               k().createElement(G, {
@@ -8335,61 +8336,64 @@
                           canCopy: !0,
                         })
                       : 'text/csv' === oa()(t) || /text\/csv/.test(t)
-                      ? k().createElement(l, {
-                          downloadable: !0,
-                          fileName: `${c}.csv`,
-                          value: e,
-                          getConfigs: a,
-                          canCopy: !0,
-                        })
-                      : /^image\//i.test(t)
-                      ? t.includes('svg')
-                        ? k().createElement('div', null, ' ', e, ' ')
-                        : k().createElement('img', {
-                            src: window.URL.createObjectURL(e),
+                        ? k().createElement(l, {
+                            downloadable: !0,
+                            fileName: `${c}.csv`,
+                            value: e,
+                            getConfigs: a,
+                            canCopy: !0,
                           })
-                      : /^audio\//i.test(t)
-                      ? k().createElement(
-                          'pre',
-                          { className: 'microlight' },
-                          k().createElement(
-                            'audio',
-                            { controls: !0, key: r },
-                            k().createElement('source', { src: r, type: t }),
-                          ),
-                        )
-                      : 'string' == typeof e
-                      ? k().createElement(l, {
-                          downloadable: !0,
-                          fileName: `${c}.txt`,
-                          value: e,
-                          getConfigs: a,
-                          canCopy: !0,
-                        })
-                      : e.size > 0
-                      ? o
-                        ? k().createElement(
-                            'div',
-                            null,
-                            k().createElement(
-                              'p',
-                              { className: 'i' },
-                              'Unrecognized response type; displaying content as text.',
-                            ),
-                            k().createElement(l, {
-                              downloadable: !0,
-                              fileName: `${c}.txt`,
-                              value: o,
-                              getConfigs: a,
-                              canCopy: !0,
-                            }),
-                          )
-                        : k().createElement(
-                            'p',
-                            { className: 'i' },
-                            'Unrecognized response type; unable to display.',
-                          )
-                      : null);
+                        : /^image\//i.test(t)
+                          ? t.includes('svg')
+                            ? k().createElement('div', null, ' ', e, ' ')
+                            : k().createElement('img', {
+                                src: window.URL.createObjectURL(e),
+                              })
+                          : /^audio\//i.test(t)
+                            ? k().createElement(
+                                'pre',
+                                { className: 'microlight' },
+                                k().createElement(
+                                  'audio',
+                                  { controls: !0, key: r },
+                                  k().createElement('source', {
+                                    src: r,
+                                    type: t,
+                                  }),
+                                ),
+                              )
+                            : 'string' == typeof e
+                              ? k().createElement(l, {
+                                  downloadable: !0,
+                                  fileName: `${c}.txt`,
+                                  value: e,
+                                  getConfigs: a,
+                                  canCopy: !0,
+                                })
+                              : e.size > 0
+                                ? o
+                                  ? k().createElement(
+                                      'div',
+                                      null,
+                                      k().createElement(
+                                        'p',
+                                        { className: 'i' },
+                                        'Unrecognized response type; displaying content as text.',
+                                      ),
+                                      k().createElement(l, {
+                                        downloadable: !0,
+                                        fileName: `${c}.txt`,
+                                        value: o,
+                                        getConfigs: a,
+                                        canCopy: !0,
+                                      }),
+                                    )
+                                  : k().createElement(
+                                      'p',
+                                      { className: 'i' },
+                                      'Unrecognized response type; unable to display.',
+                                    )
+                                : null);
             return p
               ? k().createElement(
                   'div',
@@ -8431,8 +8435,8 @@
             'parameters' === e
               ? this.setState({ parametersVisible: !0, callbackVisible: !1 })
               : 'callbacks' === e
-              ? this.setState({ callbackVisible: !0, parametersVisible: !1 })
-              : void 0;
+                ? this.setState({ callbackVisible: !0, parametersVisible: !1 })
+                : void 0;
           onChangeMediaType = (e) => {
             let { value: t, pathMethod: r } = e,
               { specActions: n, oas3Selectors: a, oas3Actions: s } = this.props;
@@ -8831,8 +8835,8 @@
                   void 0 !== s.get('x-example')
                     ? s.get('x-example')
                     : void 0 !== s.getIn(['schema', 'example'])
-                    ? s.getIn(['schema', 'example'])
-                    : o && o.getIn(['default']);
+                      ? s.getIn(['schema', 'example'])
+                      : o && o.getIn(['default']);
               else if (e.isOAS3()) {
                 const e = n.activeExamplesMember(
                   ...t,
@@ -8843,14 +8847,14 @@
                   void 0 !== s.getIn(['examples', e, 'value'])
                     ? s.getIn(['examples', e, 'value'])
                     : void 0 !== s.getIn(['content', l, 'example'])
-                    ? s.getIn(['content', l, 'example'])
-                    : void 0 !== s.get('example')
-                    ? s.get('example')
-                    : void 0 !== (o && o.get('example'))
-                    ? o && o.get('example')
-                    : void 0 !== (o && o.get('default'))
-                    ? o && o.get('default')
-                    : s.get('default');
+                      ? s.getIn(['content', l, 'example'])
+                      : void 0 !== s.get('example')
+                        ? s.get('example')
+                        : void 0 !== (o && o.get('example'))
+                          ? o && o.get('example')
+                          : void 0 !== (o && o.get('default'))
+                            ? o && o.get('default')
+                            : s.get('default');
               }
               void 0 === r || I.List.isList(r) || (r = stringify(r)),
                 void 0 !== r
@@ -9354,12 +9358,12 @@
                           jumpToLine: o,
                         })
                       : 'spec' === r
-                      ? k().createElement(SpecErrorItem, {
-                          key: t,
-                          error: e,
-                          jumpToLine: o,
-                        })
-                      : void 0;
+                        ? k().createElement(SpecErrorItem, {
+                            key: t,
+                            error: e,
+                            jumpToLine: o,
+                          })
+                        : void 0;
                   }),
                 ),
               ),
@@ -10627,8 +10631,8 @@
             -1 !== e.indexOf('#/definitions/')
               ? decodeRefName(e.replace(/^.*#\/definitions\//, ''))
               : -1 !== e.indexOf('#/components/schemas/')
-              ? decodeRefName(e.replace(/^.*#\/components\/schemas\//, ''))
-              : void 0;
+                ? decodeRefName(e.replace(/^.*#\/components\/schemas\//, ''))
+                : void 0;
           getRefSchema = (e) => {
             let { specSelectors: t } = this.props;
             return t.findDefinition(e);
@@ -11301,8 +11305,8 @@
                 c
                   ? k().createElement(h, { source: c })
                   : m.size
-                  ? k().createElement('div', { className: 'markdown' })
-                  : null,
+                    ? k().createElement('div', { className: 'markdown' })
+                    : null,
                 u &&
                   k().createElement(
                     'div',
@@ -11539,85 +11543,90 @@
             return e
               ? k().createElement('div', null, this.props.children)
               : t && r
-              ? k().createElement(
-                  'div',
-                  { className: 'version-pragma' },
-                  n,
-                  k().createElement(
+                ? k().createElement(
                     'div',
-                    {
-                      className:
-                        'version-pragma__message version-pragma__message--ambiguous',
-                    },
+                    { className: 'version-pragma' },
+                    n,
                     k().createElement(
                       'div',
-                      null,
+                      {
+                        className:
+                          'version-pragma__message version-pragma__message--ambiguous',
+                      },
                       k().createElement(
-                        'h3',
+                        'div',
                         null,
-                        'Unable to render this definition',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        k().createElement('code', null, 'swagger'),
-                        ' and ',
-                        k().createElement('code', null, 'openapi'),
-                        ' fields cannot be present in the same Swagger or OpenAPI definition. Please remove one of the fields.',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'Supported version fields are ',
-                        k().createElement('code', null, 'swagger: ', '"2.0"'),
-                        ' and those that match ',
-                        k().createElement('code', null, 'openapi: 3.0.n'),
-                        ' (for example, ',
-                        k().createElement('code', null, 'openapi: 3.0.0'),
-                        ').',
+                        k().createElement(
+                          'h3',
+                          null,
+                          'Unable to render this definition',
+                        ),
+                        k().createElement(
+                          'p',
+                          null,
+                          k().createElement('code', null, 'swagger'),
+                          ' and ',
+                          k().createElement('code', null, 'openapi'),
+                          ' fields cannot be present in the same Swagger or OpenAPI definition. Please remove one of the fields.',
+                        ),
+                        k().createElement(
+                          'p',
+                          null,
+                          'Supported version fields are ',
+                          k().createElement('code', null, 'swagger: ', '"2.0"'),
+                          ' and those that match ',
+                          k().createElement('code', null, 'openapi: 3.0.n'),
+                          ' (for example, ',
+                          k().createElement('code', null, 'openapi: 3.0.0'),
+                          ').',
+                        ),
                       ),
                     ),
-                  ),
-                )
-              : t || r
-              ? k().createElement('div', null, this.props.children)
-              : k().createElement(
-                  'div',
-                  { className: 'version-pragma' },
-                  n,
-                  k().createElement(
-                    'div',
-                    {
-                      className:
-                        'version-pragma__message version-pragma__message--missing',
-                    },
-                    k().createElement(
+                  )
+                : t || r
+                  ? k().createElement('div', null, this.props.children)
+                  : k().createElement(
                       'div',
-                      null,
+                      { className: 'version-pragma' },
+                      n,
                       k().createElement(
-                        'h3',
-                        null,
-                        'Unable to render this definition',
+                        'div',
+                        {
+                          className:
+                            'version-pragma__message version-pragma__message--missing',
+                        },
+                        k().createElement(
+                          'div',
+                          null,
+                          k().createElement(
+                            'h3',
+                            null,
+                            'Unable to render this definition',
+                          ),
+                          k().createElement(
+                            'p',
+                            null,
+                            'The provided definition does not specify a valid version field.',
+                          ),
+                          k().createElement(
+                            'p',
+                            null,
+                            'Please indicate a valid Swagger or OpenAPI version field. Supported version fields are ',
+                            k().createElement(
+                              'code',
+                              null,
+                              'swagger: ',
+                              '"2.0"',
+                            ),
+                            ' and those that match ',
+                            k().createElement('code', null, 'openapi: 3.0.n'),
+                            ' (for example, ',
+                            k().createElement('code', null, 'openapi: 3.0.0'),
+                            ').',
+                          ),
+                        ),
                       ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'The provided definition does not specify a valid version field.',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'Please indicate a valid Swagger or OpenAPI version field. Supported version fields are ',
-                        k().createElement('code', null, 'swagger: ', '"2.0"'),
-                        ' and those that match ',
-                        k().createElement('code', null, 'openapi: 3.0.n'),
-                        ' (for example, ',
-                        k().createElement('code', null, 'openapi: 3.0.0'),
-                        ').',
-                      ),
-                    ),
-                  ),
-                );
+                    );
           }
         }
         const version_stamp = (e) => {
@@ -12246,24 +12255,24 @@
                             getComponent: e,
                           })
                         : g
-                        ? k().createElement(JsonSchemaArrayItemText, {
-                            value: t,
-                            onChange: (e) => this.onItemChange(e, r),
-                            disabled: s,
-                            errors: o,
-                          })
-                        : k().createElement(
-                            h,
-                            rt()({}, this.props, {
+                          ? k().createElement(JsonSchemaArrayItemText, {
                               value: t,
                               onChange: (e) => this.onItemChange(e, r),
                               disabled: s,
                               errors: o,
-                              schema: d,
-                              getComponent: e,
-                              fn: a,
-                            }),
-                          ),
+                            })
+                          : k().createElement(
+                              h,
+                              rt()({}, this.props, {
+                                value: t,
+                                onChange: (e) => this.onItemChange(e, r),
+                                disabled: s,
+                                errors: o,
+                                schema: d,
+                                getComponent: e,
+                                fn: a,
+                              }),
+                            ),
                       s
                         ? null
                         : k().createElement(
@@ -12382,8 +12391,8 @@
               'string' == typeof e
                 ? e
                 : 'string' == typeof e.error
-                ? e.error
-                : null;
+                  ? e.error
+                  : null;
             if (!t && r) return r;
             let n = e.error,
               a = `/${e.propKey}`;
@@ -12435,8 +12444,8 @@
           return I.List.isList(e)
             ? e
             : Array.isArray(e)
-            ? (0, I.fromJS)(e)
-            : (0, I.List)();
+              ? (0, I.fromJS)(e)
+              : (0, I.List)();
         }
         const json_schema_components = () => ({ components: { ...E } }),
           base = () => [
@@ -13183,19 +13192,17 @@
                                       onChange:
                                         this.onServerVariableValueChange,
                                     },
-                                    a
-                                      .get('enum')
-                                      .map((e) =>
-                                        k().createElement(
-                                          'option',
-                                          {
-                                            selected: e === r(t, n),
-                                            key: e,
-                                            value: e,
-                                          },
-                                          e,
-                                        ),
+                                    a.get('enum').map((e) =>
+                                      k().createElement(
+                                        'option',
+                                        {
+                                          selected: e === r(t, n),
+                                          key: e,
+                                          value: e,
+                                        },
+                                        e,
                                       ),
+                                    ),
                                   )
                                 : k().createElement('input', {
                                     type: 'text',
@@ -14280,87 +14287,87 @@
             return t
               ? k().createElement('div', null, o)
               : r && (n || a)
-              ? k().createElement(
-                  'div',
-                  { className: 'version-pragma' },
-                  s,
-                  k().createElement(
+                ? k().createElement(
                     'div',
-                    {
-                      className:
-                        'version-pragma__message version-pragma__message--ambiguous',
-                    },
+                    { className: 'version-pragma' },
+                    s,
                     k().createElement(
                       'div',
-                      null,
+                      {
+                        className:
+                          'version-pragma__message version-pragma__message--ambiguous',
+                      },
                       k().createElement(
-                        'h3',
+                        'div',
                         null,
-                        'Unable to render this definition',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        k().createElement('code', null, 'swagger'),
-                        ' and ',
-                        k().createElement('code', null, 'openapi'),
-                        ' fields cannot be present in the same Swagger or OpenAPI definition. Please remove one of the fields.',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'Supported version fields are ',
-                        k().createElement('code', null, 'swagger: "2.0"'),
-                        ' and those that match ',
-                        k().createElement('code', null, 'openapi: 3.x.y'),
-                        ' (for example,',
-                        ' ',
-                        k().createElement('code', null, 'openapi: 3.1.0'),
-                        ').',
+                        k().createElement(
+                          'h3',
+                          null,
+                          'Unable to render this definition',
+                        ),
+                        k().createElement(
+                          'p',
+                          null,
+                          k().createElement('code', null, 'swagger'),
+                          ' and ',
+                          k().createElement('code', null, 'openapi'),
+                          ' fields cannot be present in the same Swagger or OpenAPI definition. Please remove one of the fields.',
+                        ),
+                        k().createElement(
+                          'p',
+                          null,
+                          'Supported version fields are ',
+                          k().createElement('code', null, 'swagger: "2.0"'),
+                          ' and those that match ',
+                          k().createElement('code', null, 'openapi: 3.x.y'),
+                          ' (for example,',
+                          ' ',
+                          k().createElement('code', null, 'openapi: 3.1.0'),
+                          ').',
+                        ),
                       ),
                     ),
-                  ),
-                )
-              : r || n || a
-              ? k().createElement('div', null, o)
-              : k().createElement(
-                  'div',
-                  { className: 'version-pragma' },
-                  s,
-                  k().createElement(
-                    'div',
-                    {
-                      className:
-                        'version-pragma__message version-pragma__message--missing',
-                    },
-                    k().createElement(
+                  )
+                : r || n || a
+                  ? k().createElement('div', null, o)
+                  : k().createElement(
                       'div',
-                      null,
+                      { className: 'version-pragma' },
+                      s,
                       k().createElement(
-                        'h3',
-                        null,
-                        'Unable to render this definition',
+                        'div',
+                        {
+                          className:
+                            'version-pragma__message version-pragma__message--missing',
+                        },
+                        k().createElement(
+                          'div',
+                          null,
+                          k().createElement(
+                            'h3',
+                            null,
+                            'Unable to render this definition',
+                          ),
+                          k().createElement(
+                            'p',
+                            null,
+                            'The provided definition does not specify a valid version field.',
+                          ),
+                          k().createElement(
+                            'p',
+                            null,
+                            'Please indicate a valid Swagger or OpenAPI version field. Supported version fields are ',
+                            k().createElement('code', null, 'swagger: "2.0"'),
+                            ' and those that match ',
+                            k().createElement('code', null, 'openapi: 3.x.y'),
+                            ' (for example,',
+                            ' ',
+                            k().createElement('code', null, 'openapi: 3.1.0'),
+                            ').',
+                          ),
+                        ),
                       ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'The provided definition does not specify a valid version field.',
-                      ),
-                      k().createElement(
-                        'p',
-                        null,
-                        'Please indicate a valid Swagger or OpenAPI version field. Supported version fields are ',
-                        k().createElement('code', null, 'swagger: "2.0"'),
-                        ' and those that match ',
-                        k().createElement('code', null, 'openapi: 3.x.y'),
-                        ' (for example,',
-                        ' ',
-                        k().createElement('code', null, 'openapi: 3.1.0'),
-                        ').',
-                      ),
-                    ),
-                  ),
-                );
+                    );
           },
           getModelName = (e) =>
             'string' == typeof e && e.includes('#/components/schemas/')
@@ -15153,8 +15160,8 @@
               r
                 ? safeBuildUrl(r, e, { selectedServer: t })
                 : n
-                ? `https://spdx.org/licenses/${n}.html`
-                : void 0,
+                  ? `https://spdx.org/licenses/${n}.html`
+                  : void 0,
           ),
           keywords_Example = (e) => {
             let { schema: t, getSystem: r } = e;
@@ -15724,8 +15731,8 @@
                         return n.isOAS31()
                           ? a(...arguments)
                           : 'function' == typeof s
-                          ? s(...arguments)
-                          : void 0;
+                            ? s(...arguments)
+                            : void 0;
                       },
                     ];
                   }),
@@ -17008,20 +17015,20 @@
                     ),
                   )
                 : !1 === n
-                ? k().createElement(
-                    k().Fragment,
-                    null,
-                    s,
-                    k().createElement(
-                      'span',
-                      {
-                        className:
-                          'json-schema-2020-12__attribute json-schema-2020-12__attribute--primary',
-                      },
-                      'forbidden',
-                    ),
-                  )
-                : k().createElement(a, { name: s, schema: n }),
+                  ? k().createElement(
+                      k().Fragment,
+                      null,
+                      s,
+                      k().createElement(
+                        'span',
+                        {
+                          className:
+                            'json-schema-2020-12__attribute json-schema-2020-12__attribute--primary',
+                        },
+                        'forbidden',
+                      ),
+                    )
+                  : k().createElement(a, { name: s, schema: n }),
             );
           },
           keywords_PropertyNames = (e) => {
@@ -17425,10 +17432,10 @@
             return e?.title
               ? t.upperFirst(e.title)
               : e?.$anchor
-              ? t.upperFirst(e.$anchor)
-              : e?.$id
-              ? e.$id
-              : '';
+                ? t.upperFirst(e.$anchor)
+                : e?.$id
+                  ? e.$id
+                  : '';
           },
           getType = function (e) {
             let t =
@@ -17466,62 +17473,62 @@
                       .map((e) => ('array' === e ? getArrayType() : e))
                       .join(' | ')
                   : 'array' === n
-                  ? getArrayType()
-                  : [
-                      'null',
-                      'boolean',
-                      'object',
-                      'array',
-                      'number',
-                      'integer',
-                      'string',
-                    ].includes(n)
-                  ? n
-                  : (() => {
-                      if (
-                        Object.hasOwn(e, 'prefixItems') ||
-                        Object.hasOwn(e, 'items') ||
-                        Object.hasOwn(e, 'contains')
-                      )
-                        return getArrayType();
-                      if (
-                        Object.hasOwn(e, 'properties') ||
-                        Object.hasOwn(e, 'additionalProperties') ||
-                        Object.hasOwn(e, 'patternProperties')
-                      )
-                        return 'object';
-                      if (['int32', 'int64'].includes(e.format))
-                        return 'integer';
-                      if (['float', 'double'].includes(e.format))
-                        return 'number';
-                      if (
-                        Object.hasOwn(e, 'minimum') ||
-                        Object.hasOwn(e, 'maximum') ||
-                        Object.hasOwn(e, 'exclusiveMinimum') ||
-                        Object.hasOwn(e, 'exclusiveMaximum') ||
-                        Object.hasOwn(e, 'multipleOf')
-                      )
-                        return 'number | integer';
-                      if (
-                        Object.hasOwn(e, 'pattern') ||
-                        Object.hasOwn(e, 'format') ||
-                        Object.hasOwn(e, 'minLength') ||
-                        Object.hasOwn(e, 'maxLength')
-                      )
-                        return 'string';
-                      if (void 0 !== e.const) {
-                        if (null === e.const) return 'null';
-                        if ('boolean' == typeof e.const) return 'boolean';
-                        if ('number' == typeof e.const)
-                          return Number.isInteger(e.const)
-                            ? 'integer'
-                            : 'number';
-                        if ('string' == typeof e.const) return 'string';
-                        if (Array.isArray(e.const)) return 'array<any>';
-                        if ('object' == typeof e.const) return 'object';
-                      }
-                      return null;
-                    })(),
+                    ? getArrayType()
+                    : [
+                          'null',
+                          'boolean',
+                          'object',
+                          'array',
+                          'number',
+                          'integer',
+                          'string',
+                        ].includes(n)
+                      ? n
+                      : (() => {
+                          if (
+                            Object.hasOwn(e, 'prefixItems') ||
+                            Object.hasOwn(e, 'items') ||
+                            Object.hasOwn(e, 'contains')
+                          )
+                            return getArrayType();
+                          if (
+                            Object.hasOwn(e, 'properties') ||
+                            Object.hasOwn(e, 'additionalProperties') ||
+                            Object.hasOwn(e, 'patternProperties')
+                          )
+                            return 'object';
+                          if (['int32', 'int64'].includes(e.format))
+                            return 'integer';
+                          if (['float', 'double'].includes(e.format))
+                            return 'number';
+                          if (
+                            Object.hasOwn(e, 'minimum') ||
+                            Object.hasOwn(e, 'maximum') ||
+                            Object.hasOwn(e, 'exclusiveMinimum') ||
+                            Object.hasOwn(e, 'exclusiveMaximum') ||
+                            Object.hasOwn(e, 'multipleOf')
+                          )
+                            return 'number | integer';
+                          if (
+                            Object.hasOwn(e, 'pattern') ||
+                            Object.hasOwn(e, 'format') ||
+                            Object.hasOwn(e, 'minLength') ||
+                            Object.hasOwn(e, 'maxLength')
+                          )
+                            return 'string';
+                          if (void 0 !== e.const) {
+                            if (null === e.const) return 'null';
+                            if ('boolean' == typeof e.const) return 'boolean';
+                            if ('number' == typeof e.const)
+                              return Number.isInteger(e.const)
+                                ? 'integer'
+                                : 'number';
+                            if ('string' == typeof e.const) return 'string';
+                            if (Array.isArray(e.const)) return 'array<any>';
+                            if ('object' == typeof e.const) return 'object';
+                          }
+                          return null;
+                        })(),
                 handleCombiningKeywords('oneOf', ' | '),
                 handleCombiningKeywords('anyOf', ' | '),
                 handleCombiningKeywords('allOf', ' & '),
@@ -17573,8 +17580,8 @@
             null === e || ['number', 'bigint', 'boolean'].includes(typeof e)
               ? String(e)
               : Array.isArray(e)
-              ? `[${e.map(fn_stringify).join(', ')}]`
-              : JSON.stringify(e),
+                ? `[${e.map(fn_stringify).join(', ')}]`
+                : JSON.stringify(e),
           stringifyConstraintRange = (e, t, r) => {
             const n = 'number' == typeof t,
               a = 'number' == typeof r;
@@ -17583,10 +17590,10 @@
                 ? `${t} ${e}`
                 : `[${t}, ${r}] ${e}`
               : n
-              ? `>= ${t} ${e}`
-              : a
-              ? `<= ${r} ${e}`
-              : null;
+                ? `>= ${t} ${e}`
+                : a
+                  ? `<= ${r} ${e}`
+                  : null;
           },
           stringifyConstraints = (e) => {
             const t = [],
@@ -17891,8 +17898,8 @@
             'function' == typeof t
               ? mo.register(e, t)
               : null === t
-              ? mo.unregister(e)
-              : mo.get(e);
+                ? mo.unregister(e)
+                : mo.get(e);
         var uo = __webpack_require__(871).Buffer;
         const _7bit = (e) => uo.from(e).toString('ascii');
         var ho = __webpack_require__(871).Buffer;
@@ -17964,8 +17971,8 @@
             'function' == typeof t
               ? Eo.register(e, t)
               : null === t
-              ? Eo.unregister(e)
-              : Eo.get(e);
+                ? Eo.unregister(e)
+                : Eo.get(e);
         encoderAPI.getDefaults = () => Eo.defaults;
         const vo = encoderAPI,
           _o = {
@@ -18219,10 +18226,10 @@
             return Array.isArray(t) && t.length >= 1
               ? t.at(0)
               : void 0 !== n
-              ? n
-              : void 0 !== r
-              ? r
-              : void 0;
+                ? n
+                : void 0 !== r
+                  ? r
+                  : void 0;
           },
           Io = {
             array: [
@@ -18271,12 +18278,12 @@
             void 0 === e
               ? null
               : null === e
-              ? 'null'
-              : Array.isArray(e)
-              ? 'array'
-              : Number.isInteger(e)
-              ? 'integer'
-              : typeof e,
+                ? 'null'
+                : Array.isArray(e)
+                  ? 'array'
+                  : Number.isInteger(e)
+                    ? 'integer'
+                    : typeof e,
           foldType = (e) => {
             if (Array.isArray(e) && e.length >= 1) {
               if (e.includes('array')) return 'array';
@@ -18342,8 +18349,8 @@
             predicates_isBooleanJSONSchema(e)
               ? ((e) => (!1 === e ? { not: {} } : {}))(e)
               : isJSONSchemaObject(e)
-              ? e
-              : {},
+                ? e
+                : {},
           merge = function (e, t) {
             let r =
               arguments.length > 2 && void 0 !== arguments[2]
@@ -18772,8 +18779,8 @@
                 /xml/.test(r)
                   ? s.jsonSchema202012.getXmlSampleSchema(t, n, a)
                   : /(yaml|yml)/.test(r)
-                  ? s.jsonSchema202012.getYamlSampleSchema(t, n, r, a)
-                  : s.jsonSchema202012.getJsonSampleSchema(t, n, r, a)
+                    ? s.jsonSchema202012.getYamlSampleSchema(t, n, r, a)
+                    : s.jsonSchema202012.getJsonSampleSchema(t, n, r, a)
               );
             },
           json_schema_2020_12_samples = (e) => {

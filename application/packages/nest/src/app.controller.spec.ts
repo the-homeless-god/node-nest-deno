@@ -24,7 +24,6 @@ describe('AppController', () => {
   it('should return config"', () => {
     const expected = {
       nest: {
-
         local: {
           host: 'localhost',
           port: 3000,
@@ -33,7 +32,6 @@ describe('AppController', () => {
       },
 
       node: {
-
         local: {
           host: 'localhost',
           port: 3000,
@@ -42,7 +40,6 @@ describe('AppController', () => {
       },
 
       deno: {
-
         local: {
           host: 'localhost',
           port: 3000,

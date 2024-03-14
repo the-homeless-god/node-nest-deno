@@ -1,1 +1,1 @@
-export * from './root.api'
+export * from './root.api';

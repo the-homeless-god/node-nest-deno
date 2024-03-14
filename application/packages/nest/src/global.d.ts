@@ -2,8 +2,7 @@
 import { Request } from 'express';
 
 declare module 'express' {
-  interface Request {
-  }
+  interface Request {}
 }
 
 export type Nullable<T> = T | null;

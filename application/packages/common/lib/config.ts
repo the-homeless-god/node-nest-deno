@@ -1,9 +1,7 @@
-
 import packageJson from '../package.json';
 
 export const config = {
   version: {
-
     common: packageJson?.version,
   },
   api: {
@@ -21,7 +19,6 @@ export const servers = [
 
 export const getEnvironmentConfiguration = () => {
   return {
-
     nest: {
       local: {
         host: 'localhost',
@@ -38,7 +35,6 @@ export const getEnvironmentConfiguration = () => {
       },
     },
 
-
     deno: {
       local: {
         host: 'localhost',
@@ -51,4 +47,3 @@ export const getEnvironmentConfiguration = () => {
     isLocal: process.env.IS_LOCAL === 'true',
   };
 };
-

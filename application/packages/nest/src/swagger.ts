@@ -1,6 +1,6 @@
-import { servers } from '@the-homeless-god/node-nest-deno-common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { servers } from '@the-homeless-god/node-nest-deno-common';
 
 import * as swaggerStats from 'swagger-stats';
 
@@ -10,7 +10,7 @@ export const setupSwagger = (app: NestExpressApplication) => {
   const swaggerConfig = new DocumentBuilder()
     .setTitle('API')
     .setDescription('Open API')
-    .setVersion('1.0')
+    .setVersion('1.0');
 
   if (!config.isLocal) {
     servers.forEach((server) => {
