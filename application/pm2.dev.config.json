@@ -1,0 +1,37 @@
+{
+  "apps": [
+    {
+      "name": "nest",
+      "script": "npm",
+      "args": "run start:nest:dev",
+      "instances": 1,
+      "exec_mode": "fork",
+      "interpreter": "node@20.6.1",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "node",
+      "script": "npm",
+      "args": "run start:node:dev",
+      "instances": 1,
+      "exec_mode": "fork",
+      "interpreter": "node@20.6.1",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "deno",
+      "script": "npm",
+      "args": "run start:deno:dev",
+      "instances": 1,
+      "interpreter": "node@20.6.1",
+      "exec_mode": "fork",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

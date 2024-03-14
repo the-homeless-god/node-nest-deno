@@ -1,0 +1,4 @@
+{
+  "packages/**/*.{ts,js,json}": ["npm run format", "npm run test"],
+  "*.{ts,js,json}": ["npm run format:root:prettier"]
+}
