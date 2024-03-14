@@ -13,6 +13,18 @@
 - [![deploy](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/deploy.yml/badge.svg)](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/deploy.yml)
 - [![linters](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/pull-request.yml/badge.svg)](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/pull-request.yml)
 
+## Development
+
+```shell
+# to install full monorepo
+npm i
+
+# pm2-like commands
+npm run start -- --only=nest
+npm run stop -- 0
+npm run drop -- all
+```
+
 ### Additional info
 
 | Url                                   | Description         |

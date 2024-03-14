@@ -6,7 +6,7 @@
       "args": "run start:nest:dev",
       "instances": 1,
       "exec_mode": "fork",
-      "interpreter": "node@20.6.1",
+      "interpreter": "node@20.11.0",
       "env": {
         "NODE_ENV": "development"
       }
@@ -17,7 +17,7 @@
       "args": "run start:node:dev",
       "instances": 1,
       "exec_mode": "fork",
-      "interpreter": "node@20.6.1",
+      "interpreter": "node@20.11.0",
       "env": {
         "NODE_ENV": "development"
       }
@@ -27,7 +27,7 @@
       "script": "npm",
       "args": "run start:deno:dev",
       "instances": 1,
-      "interpreter": "node@20.6.1",
+      "interpreter": "node@20.11.0",
       "exec_mode": "fork",
       "env": {
         "NODE_ENV": "development"

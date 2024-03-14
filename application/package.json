@@ -6,7 +6,9 @@
   "author": "Marat Zimnurov <zimtir@mail.ru>",
   "license": "ISC",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@babel/preset-typescript": "^7.23.3",
     "@commitlint/cli": "^17.8.1",
@@ -65,6 +67,6 @@
     "lint-staged": "^14.0.1"
   },
   "engines": {
-    "node": ">=v20.6.1"
+    "node": ">=v20.11.0"
   }
 }
