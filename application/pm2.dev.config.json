@@ -6,7 +6,6 @@
       "args": "run start:nest:dev",
       "instances": 3,
       "exec_mode": "cluster",
-      "interpreter": "node@20.11.0",
       "env": {
         "NODE_ENV": "development"
       }
@@ -17,7 +16,6 @@
       "args": "run start:node:dev",
       "instances": 1,
       "exec_mode": "fork",
-      "interpreter": "node@20.11.0",
       "env": {
         "NODE_ENV": "development"
       }
