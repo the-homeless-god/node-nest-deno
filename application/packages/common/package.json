@@ -1,0 +1,42 @@
+{
+  "name": "@the-homeless-god/node-nest-deno-common",
+  "author": "Marat Zimnurov <zimtir@mail.ru>",
+  "homepage": "https://github.com/the-homeless-god/node-nest-deno#readme",
+  "license": "ISC",
+  "main": "dist/common/index.js",
+  "types": "dist/common/index.d.ts",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "dist": "dist",
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "index"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-homeless-god/node-nest-deno.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --ci --coverage --json --testLocationInResults --outputFile=report.json --passWithNoTests"
+  },
+  "bugs": {
+    "url": "https://github.com/the-homeless-god/node-nest-deno/issues"
+  },
+  "dependencies": {
+    "@nestjs/swagger": "^7.1.14",
+    "class-validator": "^0.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2"
+  }
+}
