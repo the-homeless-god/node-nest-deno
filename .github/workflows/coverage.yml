@@ -1,0 +1,58 @@
+on:
+  pull_request:
+    branches:
+      - dev
+      - master
+
+name: coverage
+jobs:
+  coverage:
+    defaults:
+      run:
+        working-directory: application
+    name: linters, tests and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - run: npm ci
+      - run: npm run test:coverage
+
+      - uses: the-homeless-god/jest-coverage-report-action@v0.1.0
+        continue-on-error: true
+        with:
+          working-directory: ./application/packages/nest
+          custom-title: Coverage report for Nest
+          test-script: npm run test:coverage
+
+      - uses: the-homeless-god/jest-coverage-report-action@v0.1.0
+        continue-on-error: true
+        with:
+          working-directory: ./application/packages/node
+          custom-title: Coverage report for Node
+          test-script: npm run test:coverage
+
+      - uses: the-homeless-god/jest-coverage-report-action@v0.1.0
+        continue-on-error: true
+        with:
+          working-directory: ./application/packages/deno
+          custom-title: Coverage report for Deno
+          test-script: npm run test:coverage
+
+      - uses: the-homeless-god/jest-coverage-report-action@v0.1.0
+        continue-on-error: true
+        with:
+          working-directory: ./application/packages/common
+          custom-title: Coverage report for Common
+          test-script: npm run test:coverage
