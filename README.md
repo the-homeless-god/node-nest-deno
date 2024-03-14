@@ -10,8 +10,8 @@
 
 ## Badges
 
-- [![deploy](https://github.com/the-homeless-god/node-nest/actions/workflows/deploy.yml/badge.svg)](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/deploy.yml)
-- [![linters](https://github.com/the-homeless-god/node-nest/actions/workflows/pull-request.yml/badge.svg)](https://github.com/the-homeless-god/node-nest-deno/actions/workflows/pull-request.yml)
+- [![deploy](https://github.com/the-homeless-god/node-nest/actions/workflows/deploy.yml/badge.svg)](https://github.com/the-homeless-god/node-nest/actions/workflows/deploy.yml)
+- [![linters](https://github.com/the-homeless-god/node-nest/actions/workflows/pull-request.yml/badge.svg)](https://github.com/the-homeless-god/node-nest/actions/workflows/pull-request.yml)
 
 ## Development
 
